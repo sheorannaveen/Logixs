@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title="REPORTS"  description="Report">
+      
+      <siteMapNode url="" title="BOOKING" description="Booking Reports">
+          <siteMapNode url="~/Reports/BookingReport2.aspx" title="BY DATE" description="Amount and Wt." />
+       </siteMapNode>
+      
+      <siteMapNode url="" title="CHALLAN"  description="Challan Reports">
+        <siteMapNode url="~/Reports/ChallanDriverCopy.aspx" title="Driver Copy" description="Challan Report Driver Copy"/>
+        </siteMapNode>
+                 
+    </siteMapNode>
+</siteMap>

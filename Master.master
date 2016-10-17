@@ -1,0 +1,1122 @@
+<%@ Master Language="VB" CodeFile="Master.master.vb" Inherits="Master" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<%@ Register TagPrefix="custom1" Namespace="DeleteControls"  %>
+<%@ Register TagPrefix="custom3" Namespace="DeleteControls"  %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+  <title>BIC Logistics Ltd</title>
+
+<link rel="stylesheet" href="style.css" type="text/css" /><style type="text/css">._css3m{display:none}</style>
+<link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="sdmenu/sdmenu.css" />
+<script language="javascript" type="text/javascript">history.go(1);</script>	
+</head>
+<body>
+<div class="cse-branding-right" style="background-color:#999999;color:#000000">
+  <div class="cse-branding-form">
+    <form action="http://www.google.co.in/cse" id="cse-search-box" target="_blank">
+      <div> 
+        <input type="hidden" name="cx" value="partner-pub-9737762536002463:rb4sco-vkxm"/>
+        <input type="hidden" name="ie" value="ISO-8859-1" />
+        <input type="text" name="q" style="width: 464px" />
+        <input type="submit" name="sa" value="Search" />
+       
+    <img src="http://www.google.com/images/poweredby_transparent/poweredby_999999.gif" alt="Google" class="cse-branding-logo"/>
+ 
+   <span class="cse-branding-text">
+    Custom Search
+  </span>
+      </div>
+    </form>
+  </div>
+  </div>
+
+        
+         <form id="MasterPageForm" runat="server"  >
+   <script type="text/javascript" language="javascript">
+            function updateTime()
+            {
+                var label = document.getElementById('MyMasterPage_currentTime');
+                if (label) {
+                    var time = (new Date()).localeFormat("T");
+                    var d = new Date();
+                    var mm=parseFloat(d.getMonth())+ 1 ;
+                    label.innerHTML = "  "+ d.getDate() + "/" + mm + "/" + d.getFullYear() + " - " + time;
+                }
+            }
+            updateTime();
+            window.setInterval(updateTime, 1000);
+
+
+        </script>
+
+
+
+
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 98%; height: 100%; background-color: grey;">
+            <tr>
+                <td colspan="1" style="width: 9px; color: white; height: 1px; text-align: right"
+                    valign="top">
+                </td>
+                <td id="master_header" colspan="2"  valign="top" style="height: 1px; text-align: left; color: white;">
+                         <span id="currentTime" runat="server" style="font-weight:bold; color: white;"/>
+                    <strong><span style="font-size: 10pt"><span style="color: red"><span style="font-size: 11pt;
+                        color: black"></span> </span></span></strong>
+                    <strong>&nbsp;</strong><asp:ScriptManager id="ScriptManager1" AllowCustomErrorsRedirect="true"  runat="server" AsyncPostBackTimeout="5400"  EnablePartialRendering="true"  EnablePageMethods="True">
+                            
+                        </asp:ScriptManager>
+                        <div id="master_headertop" style="text-align: right;">
+                       
+                    </div>
+                </td>
+                <td colspan="1" style="color: white; text-align: right; width: 1px;" valign="top" rowspan="2">
+                </td>
+           </tr>
+           <tr>
+               <td style="width: 9px; height: 367px; text-align: left" valign="top">
+               </td>
+                 
+                <td valign="top" style="height: 367px; text-align: left; width: 1333px;" >                        
+                <div id="master_contentplaceholder" style="text-align: center"  >
+                 <span style="font-size: 14pt"><span style="font-size: 24pt"><span style="font-size: 22pt;
+                     color: #808000; font-family: Times New Roman"><strong>BIC LOGISTICS LTD</strong></span><br />
+                 </span></span>
+                 <br />
+                 <span style="font-size: 12pt; font-family: Times New Roman">
+                  <strong>[ </strong>Welcome,
+                  </span>
+                  <asp:LoginName ID="LoginName1" runat="server" Font-Bold="True" />
+                  <span style="font-family: Times New Roman; font-size: 12pt">in <strong>2016-2017</strong> Session.
+                  <strong>] [
+                      <asp:LinkButton ID="lnkLogOut" runat="server" BorderColor="Red" ForeColor="Red" Font-Bold="True" Font-Size="12pt" Font-Names="Times New Roman">Log Out</asp:LinkButton>
+                      ]</strong></span>
+         <div >
+                      <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+                     <ul id="css3menu1" class="topmenu">
+<li class="topmenu" style="text-align: left"><asp:HyperLink ID="HomePageLink" runat="server" NavigateUrl="~/EntryForms/Default2.aspx">Home</asp:HyperLink></li>
+	<li class="topmenu" style="text-align: left"><a href="#"><span>Entry Forms</span></a>
+	<ul>
+	<li class="subfirst" style="text-align: left"><a href="#" ><span>1. Booking Forms</span></a>
+	<ul style="text-align: left">
+		<li class="subfirst" style="text-align: left"><asp:HyperLink ID="b1"  Visible="true" runat="server" NavigateUrl="~/EntryForms/Bookingcs.aspx">Booking Add</asp:HyperLink></li>
+        <%--<li style="text-align: left"><asp:HyperLink ID="b2" Visible="true" runat="server" NavigateUrl="~/EntryForms/BookingCS_P.aspx">Booking At Padi</asp:HyperLink></li>--%>
+        <li style="text-align: left"><asp:HyperLink ID="bmod" Visible="true" runat="server" NavigateUrl="~/EntryForms/BookingUpd.aspx">Booking Modify</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="b3"  Visible="false" runat="server" NavigateUrl="~/EntryForms/contractentryit208.aspx">Contract Add</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="Cntrctupload"  Visible="true"  runat="server" NavigateUrl="~/EntryForms/ContractUpload.aspx">Contract View&Upload</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="Cntrctdwnload"  Visible="FALSE"  runat="server" NavigateUrl="~/EntryForms/ContractDownload.aspx">Contract Download</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="Cntrctdwnload2015"  Visible="FALSE"  runat="server" NavigateUrl="~/EntryForms/ContractDownload2015.aspx">Contract Download 2015</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="customerentry"  Visible="true"  runat="server" NavigateUrl="~/EntryForms/Customerupdsales_collec.aspx">Customer Update</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="contractACC"  Visible="false"  runat="server" NavigateUrl="~/EntryForms/ContractDownloadacc.aspx">Contract Download</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="margincln"  Visible="true"  runat="server" NavigateUrl="~/EntryForms/costingcln.aspx">CLN Margin</asp:HyperLink></li>
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="custmarg"  Visible="true"  runat="server" NavigateUrl="~/EntryForms/costing.aspx">New Customer Margin</asp:HyperLink></li>
+	</ul></li>
+
+	<li class="subfirst" style="text-align: left"><a href="#"><span>2. Challan Forms</span></a>
+	<ul>
+		
+		<li style="text-align: left"><asp:HyperLink ID="b4" Visible="true" runat="server" NavigateUrl="~/EntryForms/GridChallanCS.aspx">Challan Add</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="b5" Visible="true" runat="server" NavigateUrl="~/EntryForms/GridChallanTrainCS.aspx">Train Challan Add</asp:HyperLink>       </li>
+        <li  style="text-align: left"><asp:HyperLink ID="HyperLink55" Visible="true" runat="server" NavigateUrl="~/EntryForms/ChallanWithLorry.aspx">Local Challan Add</asp:HyperLink>     </li>  
+        <li  style="text-align: left"><asp:HyperLink ID="HyperLink68" Visible="true" runat="server" NavigateUrl="~/EntryForms/LLHCH.aspx">Local Challan With Extra Charges</asp:HyperLink></li>
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="dwnldpckupdlv" Visible="true" runat="server" NavigateUrl="~/EntryForms/DownloadPickupDelivery.aspx">Download PickUp & Delivery</asp:HyperLink>       </li>
+	</ul></li>
+	<li class="subfirst" style="text-align: left"><a href="#"><span>3. Lorry Forms</span></a>
+	<ul>		
+		<li class="subfirst" style="text-align: left"><asp:HyperLink ID="b6" Visible="true" runat="server" NavigateUrl="~/EntryForms/Lrs.aspx">Hire Slip(Road & Jit)</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="b7" Visible="true" runat="server" NavigateUrl="~/EntryForms/LorryTrain.aspx">Hire Slip(Train)</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="b8" Visible="true" runat="server" NavigateUrl="~/EntryForms/Lorryctruck.aspx">Hire Slip (BIC)</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="b9" Visible="true" runat="server" NavigateUrl="~/EntryForms/vehicle.aspx">Vehicle Add</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="b10" Visible="true" runat="server" NavigateUrl="~/EntryForms/frmtruckmonitor.aspx">TruckMonitor</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="Lpayment" Visible="true" runat="server" NavigateUrl="~/EntryForms/lorrypayment.aspx">Lorry Advance</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="paidMamoolHamali" Visible="true" runat="server" NavigateUrl="~/EntryForms/LorrypayMamool.aspx">Update Hamali/Mamool Charges</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="Lpay" Visible="true" runat="server" NavigateUrl="~/EntryForms/LorrypayOld.aspx">Lorry Pay View</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="lpaynew" Visible="false" runat="server" NavigateUrl="~/EntryForms/Lorrypaynew.aspx">Lorry Pay New</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="l4c" Visible="false" runat="server" NavigateUrl="~/EntryForms/Lorrypay4company.aspx">Pay Diesel & Driver Advance</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="HyperLink19"  runat="server" NavigateUrl="~/EntryForms/trackandtracenew.aspx">Trackandtrace</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="HyperLink49"  runat="server" NavigateUrl="~/EntryForms/reqveh.aspx">Vehicle Request</asp:HyperLink></li>
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="HyperLink50"  runat="server" NavigateUrl="~/EntryForms/placebroker.aspx">Broker Request</asp:HyperLink></li>
+	</ul></li>
+	<li class="subfirst" style="text-align: left"><a href="#"><span>4. Unloading Forms</span></a>
+	<ul>
+		<li class="subfirst" style="text-align: left"><asp:HyperLink ID="b11" Visible="true" runat="server" NavigateUrl="~/EntryForms/unloadingCS.aspx">Unloading Add</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="b12" Visible="true" runat="server" NavigateUrl="~/EntryForms/DelhiHubUnload.aspx">Unloading ALL Add</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="HyperLink33" Visible="true" runat="server" NavigateUrl="~/EntryForms/UnloadingDirectDlv.aspx">Unloading Direct Dly</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="Rcov12" Visible="true" runat="server" NavigateUrl="~/EntryForms/UnloadingDamageExsShortage.aspx">Unloading Recovery(Damage,Excess& Shortage)</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="uploadCert" Visible="true" runat="server" NavigateUrl="~/EntryForms/BillingCertification.aspx">Upload Certification</asp:HyperLink></li>
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="driverbonus" Visible="false" runat="server" NavigateUrl="~/EntryForms/lorrydriverbonus.aspx">Driver Bonus</asp:HyperLink></li>
+		
+	</ul></li>
+	<li class="subfirst" style="text-align: left"><a href="#"><span>5. WMS</span></a>
+	<ul>
+		<li class="subfirst" style="text-align: left"><asp:HyperLink ID="whin"  runat="server"  NavigateUrl="~/EntryForms/wh_incs.aspx">GGN INWARD</asp:HyperLink></li> 
+        <li  style="text-align: left"><asp:HyperLink ID="whout"  runat="server" NavigateUrl="~/EntryForms/wh_outcs.aspx">GGN OUTWARD</asp:HyperLink></li> 
+        <li  style="text-align: left"><asp:HyperLink ID="whprint"  runat="server" NavigateUrl="~/Reports/WHPrint.aspx">Warehouse Print</asp:HyperLink></li> 
+        <li  style="text-align: left"><asp:HyperLink ID="whdbtbd"  runat="server" NavigateUrl="~/Reports/WHDetail.aspx">Warehouse Rpt Between Branch & Date</asp:HyperLink></li> 
+        <li  style="text-align: left"><asp:HyperLink ID="whstock"  runat="server" NavigateUrl="~/Reports/warehousestock.aspx">Warehouse Stock & Pending Gatepass Rpt</asp:HyperLink></li> 
+        <li  style="text-align: left"><asp:HyperLink ID="wms1"  runat="server" Visible="false" NavigateUrl="~/EntryForms/frmwmsin.aspx">WMS INWARD</asp:HyperLink></li> 
+        <li  style="text-align: left"><asp:HyperLink ID="wms2"  runat="server" Visible="false" NavigateUrl="~/EntryForms/frmwmsout.aspx">WMS OUTWARD</asp:HyperLink></li> 
+        <li  style="text-align: left"><asp:HyperLink ID="wms3"  runat="server" Visible="false" NavigateUrl="~/EntryForms/frmwmstrackbygrno.aspx">CLN TRACKING</asp:HyperLink></li> 
+        <li  style="text-align: left"><asp:HyperLink ID="wms4"  runat="server" Visible="false" NavigateUrl="~/EntryForms/frmwmstrackbyitemcode.aspx">PARTNO TRACKING</asp:HyperLink></li> 
+        <li  style="text-align: left"><asp:HyperLink ID="wms5"  runat="server" Visible="false" NavigateUrl="~/EntryForms/frmwmstrackbyinvno.aspx">INVNO TRACKING</asp:HyperLink></li> 
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="wms6" runat="server"  Visible="false" NavigateUrl="~/misReports/frmwmsconsi.aspx">STOCK REPORT</asp:HyperLink></li> 		
+	</ul>
+	</li>
+	<li class="subfirst" style="text-align: left"><a href="#"><span>6. Delivery Challan</span></a>
+	<ul>
+		<li class="subfirst" style="text-align: left"><asp:HyperLink ID="b13" Visible="true" runat="server" NavigateUrl="~/EntryForms/DeliveryChallanCs.aspx">Delivery Challan Add</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="HyperLink12" Visible="true" runat="server" NavigateUrl="~/EntryForms/cft_master.aspx">CFT Detail Add</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="Dwnldpckupdlvd" Visible="true" runat="server" NavigateUrl="~/EntryForms/DownloadPickupDelivery.aspx">Download PickUp & Delivery</asp:HyperLink> </li>
+        <li  style="text-align: left"><asp:HyperLink ID="HyperLink102" Visible="true" runat="server" NavigateUrl="~/EntryForms/DownloadPickupDelivery2015.aspx">Download PickUp & Delivery 2015</asp:HyperLink> </li>
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="LLHDC" Visible="true" runat="server" NavigateUrl="~/EntryForms/LLHDC.aspx">DC With Extra Charges</asp:HyperLink></li>
+	</ul>
+	</li>
+	<li class="subfirst" style="text-align: left"><a href="#"><span>7. Gatepass Forms</span></a>
+	<ul>
+		<li class="subfirst" style="text-align: left"><asp:HyperLink ID="podupload" Visible="true" runat="server" NavigateUrl="~/EntryForms/PODupload.aspx">POD Upload</asp:HyperLink></li>
+		<li class="sublast" style="text-align: left"><asp:HyperLink ID="b14" Visible="true" runat="server" NavigateUrl="~/EntryForms/GatePassAutoBillSMS.aspx">GatePass Add</asp:HyperLink></li>
+	</ul></li>
+	<li class="subfirst" style="text-align: left"><a href="#"><span>8. ACK/POD</span></a>
+	<ul>
+		<li class="subfirst" style="text-align: left"><asp:HyperLink ID="poddwnload" Visible="true" runat="server" NavigateUrl="~/EntryForms/download.aspx">POD Download</asp:HyperLink></li>
+		<li class="subfirst" style="text-align: left"><asp:HyperLink ID="poddwnload2015" Visible="true" runat="server" NavigateUrl="~/EntryForms/download2015.aspx">POD Download 2015</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="poddwnloadall" Visible="true" runat="server" NavigateUrl="~/EntryForms/poddownloadall.aspx">POD Download All</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="poddwnloadall2015" Visible="true" runat="server" NavigateUrl="~/EntryForms/poddownloadall2015.aspx">POD Download All 2015</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="b15" Visible="true" runat="server" NavigateUrl="~/EntryForms/podready.aspx">POD Ready for Courier</asp:HyperLink></li>
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="b16" Visible="true" runat="server" NavigateUrl="~/EntryForms/podsend.aspx">Courier Updation</asp:HyperLink></li>
+	</ul></li>
+	<li class="subfirst" style="text-align: left"><a href="#"><span>9. Received Forms</span></a>
+	<ul>
+	    <li class="subfirst" style="text-align: left"><asp:HyperLink ID="b21" Visible="true" runat="server" NavigateUrl="~/Reports/rcvdandbill.aspx">RCVD WITH BILL DETAIL</asp:HyperLink></li>
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="b17" Visible="true" runat="server" NavigateUrl="~/entryforms/podreceived.aspx">Courier Receiving</asp:HyperLink></li>
+    </ul>
+    </li>
+	<li class="subfirst" style="text-align: left"><a href="#"><span>10. Billing Forms</span></a>
+	<ul>
+		<li class="subfirst" style="text-align: left"><asp:HyperLink ID="b22" Visible="false" runat="server" NavigateUrl="~/EntryForms/Billingsouth.aspx">Billing Add</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="BLCHN"  Visible="False" runat="server" NavigateUrl="~/EntryForms/BillingChennai.aspx">Billing Chennai</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="b24" Visible="true" runat="server" NavigateUrl="~/EntryForms/billpreprint.aspx">Bill Preprint</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="b25" Visible="true" runat="server" NavigateUrl="~/EntryForms/billpreprintoth.aspx">Bill Preprint(Except Chennai RO)</asp:HyperLink></li>
+      <li style="text-align: left"><asp:HyperLink ID="b26" Visible="true" runat="server" NavigateUrl="~/EntryForms/frmotherbills.aspx">Logistics Billing Add</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="b27" Visible="true"  runat="server" NavigateUrl="~/EntryForms/frmcandfpreprint.aspx">Logistics Bill Preprint</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="cbz1"  Visible="False" runat="server" NavigateUrl="~/misReports/billingzone.aspx">Billing Report</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="billsum" Visible="true"  runat="server" NavigateUrl="~/EntryForms/BillSubmission.aspx">Bill Ready for Submission</asp:HyperLink></li>
+       <li class="sublast" style="text-align: left"><asp:HyperLink ID="HyperLink67" Visible="true"  runat="server" NavigateUrl="~/EntryForms/Billapproval.aspx">Bill Approval</asp:HyperLink></li>
+	</ul>
+	</li>
+	<li class="subfirst" style="text-align: left"><a href="#"><span>11. Receipt Forms</span></a>
+	<ul>
+		<li class="subfirst" style="text-align: left"> <asp:HyperLink ID="payadvcuplod"  visible="True" runat="server" NavigateUrl="~/EntryForms/DeductionUpload.aspx?Value=ADVICE">Upload Payment Advice </asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="rcptonac"  Visible="true" runat="server" NavigateUrl="~/EntryForms/ReceiptOnAc.aspx">OnAC/Others/Excess Receipt</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="rcptadj"  visible="true" runat="server" NavigateUrl="~/EntryForms/ReceiptAdjust.aspx">Adjustment Receipt(OnAC/Others)</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="cr"  Visible="true" runat="server" NavigateUrl="~/EntryForms/ReceiptCSH.aspx?Value=CASH">Cash Receipt</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="br"  visible="true" runat="server" NavigateUrl="~/EntryForms/ReceiptCSH.aspx?Value=BANK">Bank Receipt</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="bnkdslip"  visible="True" runat="server" NavigateUrl="~/EntryForms/receiptdeposit.aspx">Upload Bank Deposit Slip</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="ddcuplod"  visible="True" runat="server" NavigateUrl="~/EntryForms/DeductionUpload.aspx?Value=DEDUCTION">Upload Deduction</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="ddccr"   runat="server" NavigateUrl="~/EntryForms/ReceiptDeduction.aspx?Value=CASH">Deduction Cash Receipt</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="ddcbr"  visible="True" runat="server" NavigateUrl="~/EntryForms/ReceiptDeduction.aspx?Value=BANK">Deduction Bank Receipt</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="ddcdwnlod"  visible="True" runat="server" NavigateUrl="~/EntryForms/DeductionDownload.aspx">Download (Dedeuction/Deposit Slip/Payment Advice)</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink196"  visible="True" runat="server" NavigateUrl="~/EntryForms/DeductionDownload2015.aspx">Download 2015(Dedeuction/Deposit Slip/Payment Advice)</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="northcollection"  visible="True" runat="server" NavigateUrl="~/EntryForms/DepositDetail.aspx">Daily Collection Details</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="b28" Visible="true" runat="server" NavigateUrl="~/EntryForms/crReport.aspx">CR Pre Print</asp:HyperLink></li> 
+       <li class="sublast" style="text-align: left"> <asp:HyperLink ID="b29" Visible="false" runat="server" NavigateUrl="~/EntryForms/ReceiptVerify.aspx">VALIDATE RECEIPT</asp:HyperLink></li> 
+       <li class="sublast" style="text-align: left"> <asp:HyperLink ID="b292015" Visible="false" runat="server" NavigateUrl="~/EntryForms/ReceiptVerify2015.aspx">VALIDATE RECEIPT 2015</asp:HyperLink></li> 
+	</ul>
+	</li>
+	<li class="subfirst" style="text-align: left"><a href="#"><span>12. Fund Request</span></a>
+	<ul>
+	    <li class="subfirst" style="text-align: left"> <asp:HyperLink ID="fu1" Visible="false" runat="server" NavigateUrl="~/EntryForms/fundapproveinc.aspx">Approval Of Incidental Charges</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu2" Visible="false" runat="server" NavigateUrl="~/EntryForms/fundapproveLLH.aspx">Approval Of Local Lorry & DC Hire Charges</asp:HyperLink></li> 
+        <%--<li style="text-align: left"><asp:HyperLink ID="fu3" Visible="TRUE" runat="server" NavigateUrl="~/EntryForms/fundrequest.aspx">Fund Request Form</asp:HyperLink></li> --%>
+        <li style="text-align: left"><asp:HyperLink ID="fu3" Visible="TRUE" runat="server" NavigateUrl="#">Fund Request Form</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu3a" Visible="TRUE" runat="server" NavigateUrl="~/EntryForms/fundupload.aspx">Upload Supporting Document</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu3b" Visible="TRUE" runat="server" NavigateUrl="~/EntryForms/funddownload.aspx">Download Supporting Document</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu3b2015" Visible="TRUE" runat="server" NavigateUrl="~/EntryForms/funddownload2015.aspx">Download Supporting Document 2015</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu4" Visible="false" runat="server" NavigateUrl="~/EntryForms/fundconfirm.aspx">Approval Form of Fund Request Except IT</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu4brnch" Visible="false" runat="server" NavigateUrl="~/EntryForms/fundconfirmbranch.aspx">Approval Form of Fund Request Except IT Branch Wise</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu4a" Visible="false" runat="server" NavigateUrl="~/EntryForms/fundconfirmIT.aspx">Approval Form of Fund Request IT</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu5" Visible="false" runat="server" NavigateUrl="~/EntryForms/fundpayOld.aspx">Pay Fund View</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu5new" Visible="false" runat="server" NavigateUrl="~/EntryForms/fundpaynew.aspx">Pay Fund</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu5cbk" Visible="false" runat="server" NavigateUrl="~/EntryForms/fundpaycbk.aspx">Pay Fund New</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu6" Visible="false" runat="server" NavigateUrl="~/EntryForms/fundVerify.aspx">Verify Fund Payment Details</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu7" Visible="true" runat="server" NavigateUrl="~/misReports/funddetailreport.aspx">Fund Report</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu17" Visible="true" runat="server" NavigateUrl="~/misReports/fundpayment.aspx">Fund Payment Report</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu8" Visible="true" runat="server" NavigateUrl="~/misReports/approvalincidental.aspx">Incidental Approval Report</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu9" Visible="true" runat="server" NavigateUrl="~/misReports/neft.aspx">Neft Report</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu10" Visible="false" runat="server" NavigateUrl="~/misReports/chequeprintno.aspx">Cheque Print</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu11" Visible="true" runat="server" NavigateUrl="~/misReports/chequedetail.aspx">Fund Issued</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu12" Visible="false" runat="server" NavigateUrl="~/misReports/chequecancelvalidate.aspx">Cheque Cancellation</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu13" Visible="false" runat="server" NavigateUrl="~/EntryForms/neftapproval.aspx">NEFT APPROVAL</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu15" Visible="false" runat="server" NavigateUrl="~/EntryForms/ttftapproval.aspx">TRANSFER APPROVAL</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu16" Visible="false" runat="server" NavigateUrl="~/EntryForms/rtgsapproval.aspx">RTGS APPROVAL</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fu14" Visible="false" runat="server" NavigateUrl="~/misReports/neftrefno.aspx">NEFT & RTGS LP</asp:HyperLink></li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	
+	<li class="topmenu" style="text-align: left"><a href="#"><span>Reports</span></a>
+	<ul>
+	<li class="subfirst" style="text-align: left"><a href="#"><span>1. Booking Rpts</span></a> 
+	<ul>
+       <li class="subfirst" style="text-align: left"> <asp:HyperLink ID="HyperLink72" Visible="true" runat="server" NavigateUrl="~/misReports/booking/bookingReport.aspx">1) Booking Statistics</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink3" Visible="true" runat="server" NavigateUrl="~/misReports/booking/BookingSumFrt.aspx">2) Booking Summary</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink83" Visible="true" runat="server" NavigateUrl="~/misReports/booking/frmpaymentwise.aspx">3) Monthly Booking</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink84" Visible="true" runat="server" NavigateUrl="~/misReports/booking/frmprepaid.aspx">4) Prepaid</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink85" Visible="true" runat="server" NavigateUrl="~/misReports/booking/frmtopaysum.aspx">5) To Pay</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink78" Visible="true" runat="server" NavigateUrl="~/misReports/booking/frmtobebilled.aspx">6) To Be Billed</asp:HyperLink>
+        <%--<li style="text-align: left"><asp:HyperLink ID="HyperLink75"  runat="server" NavigateUrl="~/misReports/frmgbdr111.aspx">f)GBDR - Under rectification</asp:HyperLink></li> --%>
+        </li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink75" Visible="true" runat="server" NavigateUrl="~/misReports/booking/frmgbdr.aspx">7) GBDR</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink15" Visible="true" runat="server" NavigateUrl="~/misReports/booking/frmdatewisegbdr.aspx">8) DatewiseGBDR </asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink74" Visible="true" runat="server" NavigateUrl="~/misReports/booking/frmpartiwisebkg.aspx">9) PartyWise Booking Register</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink69" Visible="true" runat="server" NavigateUrl="~/misReports/booking/frmcuswiseRTJA.aspx">10) Customerwise Booking Summary</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink116" Visible="true" runat="server" NavigateUrl="~/misReports/booking/frmtopaystatement.aspx">11) To Pay Statement</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink220" Visible="true" runat="server" NavigateUrl="~/misReports/booking/bookingReportList.aspx">12) BookingDespatch</asp:HyperLink>
+        <%--<li style="text-align: left"><asp:HyperLink ID="HyperLink71" Visible="true" runat="server" NavigateUrl="~/misReports/booking/frmtpayreg.aspx">l)To Pay Register</asp:HyperLink></li> --%>
+        <%--<li style="text-align: left"><asp:HyperLink ID="HyperLink326" Visible="true" runat="server"  NavigateUrl="~/misReports/booking/frmstaxbkg.aspx">m)Servicetax Booking</asp:HyperLink></li> --%>
+        <%--<li style="text-align: left"><asp:HyperLink ID="HyperLink12" Visible="true" runat="server"  NavigateUrl="~/misReports/booking/coveringLetter.aspx">n)Covering Letter</asp:HyperLink> </li> --%>
+        </li> 
+        <li style="text-align: left"><asp:HyperLink ID="ta1" Visible="true" runat="server"  NavigateUrl="~/misReports/booking/Tatapick.aspx">13) Tata Pickup</asp:HyperLink>
+        <%--<li style="text-align: left"><asp:HyperLink ID="HyperLink24" Visible="true" runat="server" NavigateUrl="~/misReports/booking/grbdar.aspx">p)Booking Details For Party</asp:HyperLink></li> --%>
+        </li> 
+        <li style="text-align: left"><asp:HyperLink ID="w1" Visible="true" runat="server" NavigateUrl="~/misReports/booking/wabco.aspx">14) Booking Details Wabco</asp:HyperLink>
+        <%--<li style="text-align: left"><asp:HyperLink ID="HyperLink24"  runat="server" NavigateUrl="~/Reports/grbdar.aspx">p)Details For Party</asp:HyperLink></li> --%>
+        </li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink11" Visible="true" runat="server" NavigateUrl="~/misReports/booking/frmtbbdetstatement.aspx">15) TBB Destination Statement</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink16" Visible="true" runat="server" NavigateUrl="~/misReports/12test.aspx">16) Despatch Report</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink20" Visible="true" runat="server" NavigateUrl="~/misReports/booking/bookingdespatchroad.aspx">17) Despatch Report with vehicle No</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink24" Visible="true" runat="server"  NavigateUrl="~/misReports/profitabiltygr.aspx">18) Profitability</asp:HyperLink></li> 
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="HyperLink51" Visible="true" runat="server"  NavigateUrl="~/misReports/booking/grbdar.aspx?Value=BKGBDAR">19) Booking Despatch & arrival</asp:HyperLink></li> 
+      
+      </ul>
+      </li> 
+      
+      <li class="subfirst" style="text-align: left"><a href="#"><span>2. Billing Rpts</span></a> 
+      <ul>
+        <li class="subfirst" style="text-align: left"><asp:HyperLink ID="HyperLink92" Visible="true" runat="server" NavigateUrl="~/misReports/billing/billingSummaryReport.aspx">1) Billing Summary</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink77" Visible="true" runat="server" NavigateUrl="~/misReports/billing/billingReportWeb.aspx">2) Customer Wise</asp:HyperLink>  </li>
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink76" Visible="true" runat="server" NavigateUrl="~/misReports/billing/billWiseReport.aspx">3) Bill Wise Report</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink27" Visible="true" runat="server" NavigateUrl="~/misReports/billing/serviceTaxReport.aspx">4) Service Tax</asp:HyperLink>  </li>
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink135" Visible="true" runat="server" NavigateUrl="~/misReports/billing/CRserviceTaxReport.aspx">5) Service Tax with CR</asp:HyperLink>  </li>
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink107" Visible="true" runat="server" NavigateUrl="~/misReports/billing/invoiceQuery.aspx">6) Bill Query</asp:HyperLink>  </li>
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink94" Visible="true" runat="server" NavigateUrl="~/misReports/billing/difference.aspx">7) Billing Difference</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink13" Visible="true" runat="server" NavigateUrl="~/misReports/billing/frmcover.aspx">8) Bill Coveringletter</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink17" Visible="true" runat="server" NavigateUrl="~/misReports/billing/billSubmission.aspx">9) Bill Submission Report</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink32" Visible="true"  runat="server" NavigateUrl="~/misReports/billSubmit.aspx">10) Bill Not Submitted</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink41" Visible="true"  runat="server" NavigateUrl="~/misReports/courier_detail.aspx">11) Courier Detail</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink14" Visible="true"  runat="server" NavigateUrl="~/misReports/billSubmissionCovering.aspx">12) Bill Submission Covering</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink46" Visible="true"  runat="server" NavigateUrl="~/misReports/pendingpodbill.aspx">13) Bill Submission Pending</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink65" Visible="true"  runat="server" NavigateUrl="~/misReports/billcoveringletter.aspx">14) Bill covering Ref</asp:HyperLink>   </li>
+         <li class="sublast" style="text-align: left"><asp:HyperLink ID="HyperLink66" Visible="true"  runat="server" NavigateUrl="~/misReports/sflcovering.aspx">15) Bill covering </asp:HyperLink> </li>
+         </ul>
+      </li>      
+      <li class="subfirst" style="text-align: left"><a href="#"><span>3. Despatch Rpts</span></a> 
+      <ul>
+        <li class="subfirst" style="text-align: left"><asp:HyperLink ID="HyperLink86" Visible="true" runat="server" NavigateUrl="~/misReports/Despatch/frmvehicledetail.aspx">1)Vehicle Details</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink93" Visible="true" runat="server" NavigateUrl="~/misReports/Despatch/trainReport.aspx">2)Train Cargo</asp:HyperLink></li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink8" Visible="true" runat="server" NavigateUrl="~/misReports/Despatch/trnReport.aspx">3)Train Reports</asp:HyperLink></li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink42" Visible="true" runat="server" NavigateUrl="~/misReports/Despatch/Coolie.aspx">4)Incidental Charges (Truck Outgoing)</asp:HyperLink> </li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink47" Visible="true" runat="server" NavigateUrl="~/misReports/Despatch/Cooliesite.aspx">5)Incidental Charges (Truck Outgoing sitewise)</asp:HyperLink> </li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink48" Visible="true" runat="server" NavigateUrl="~/misReports/Despatch/Coolieloaded.aspx">6)Incidental Charges (Truck Outgoing Loadwise)</asp:HyperLink> </li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink136" Visible="true" runat="server" NavigateUrl="~/misReports/Despatch/incidentalCharges.aspx">7)Incidental Charges (Truck Incoming)</asp:HyperLink></li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink2" Visible="true" runat="server" NavigateUrl="~/misReports/Despatch/hasQuery.aspx">8)Hire Slip Query</asp:HyperLink> </li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink6" Visible="true" runat="server" NavigateUrl="~/misReports/Despatch/manhasReport.aspx">9)Manifest Without Hire Slip</asp:HyperLink> </li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink117" Visible="true" runat="server" NavigateUrl="~/misReports/Despatch/LorryHireReport1.aspx">10)Lorry Hire Report</asp:HyperLink></li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink37" Visible="true" runat="server" NavigateUrl="~/misReports/Despatch/LorryHireReport2.aspx">11)TRAIN Hire Report</asp:HyperLink></li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink124" Visible="true" runat="server" NavigateUrl="~/misReports/Despatch/frmundesdet.aspx">12)Undespatch Report</asp:HyperLink></li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink335" Visible="true" runat="server" NavigateUrl="~/misReports/Despatch/frmhasdetails.aspx">13)HAS Number Details</asp:HyperLink></li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink34" Visible="true" runat="server" NavigateUrl="~/misReports/Despatch/trckwisellr.aspx">14)Vehicle summary</asp:HyperLink></li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink18" Visible="true" runat="server" NavigateUrl="~/misReports/lorrypaymentreport.aspx">15)Lorry Payment Report</asp:HyperLink></li> 
+       <li style="text-align: left"><asp:HyperLink ID="lpay1" Visible="false" runat="server" NavigateUrl="~/misReports/lorrypaymentchequewise.aspx">16)Lorry Payment Report chequewise</asp:HyperLink></li> 
+       <li style="text-align: left"><asp:HyperLink ID="lpay2" Visible="false" runat="server" NavigateUrl="~/misReports/lorrypaymentbetcheque.aspx">17)Lorry Payment between chequewise</asp:HyperLink></li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink53" Visible="true" runat="server" NavigateUrl="~/misReports/chequeempty.aspx">18)Cheque Empty</asp:HyperLink></li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink79" Visible="true" runat="server" NavigateUrl="~/misReports/chequeempty_bic.aspx">19)Cheque Empty (BIC)</asp:HyperLink></li> 
+       <li class="sublast" style="text-align: left"><asp:HyperLink ID="HyperLink62" Visible="true" runat="server" NavigateUrl="~/misReports/dcrincidental.aspx">20)LLH/Incidental Summary</asp:HyperLink></li> 
+</ul>
+     </li> 
+
+    <li class="subfirst" style="text-align: left"> <a href="#"><span>4. Delivery Rpts</span></a> 
+    <ul>
+        <li class="subfirst" style="text-align: left"><asp:HyperLink ID="HyperLink125" Visible="true" runat="server" NavigateUrl="~/misReports/frmdeliverysummary.aspx">1) Delivery Summary</asp:HyperLink> </li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink111" Visible="true" runat="server" NavigateUrl="~/misReports/deliveryReport.aspx">2) Delivery Report</asp:HyperLink> </li>   
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink26" Visible="true" runat="server" NavigateUrl="~/Reports/GatePassReport.aspx">3) DSD</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink95" Visible="true" runat="server" NavigateUrl="~/Reports/Gatepassuser.aspx">4) DSD User Wise</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink52" Visible="true" runat="server" NavigateUrl="~/misReports/frmdcrpt.aspx">5) DC Report</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink56" Visible="true" runat="server" NavigateUrl="~/misReports/frmunloadchgs.aspx">6) Local Delivery Charges Rpt</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink57" Visible="true" runat="server" NavigateUrl="~/misReports/frmllhowner.aspx">7) Ownerwise Locallorryhire Summary</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink58" Visible="true" runat="server" NavigateUrl="~/misReports/frmllhinc.aspx">8) Incidental Charge Report</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink59" Visible="true" runat="server" NavigateUrl="~/misReports/frmdlyrpt.aspx">9) Customerwise Delivery Report</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink43" Visible="true" runat="server" NavigateUrl="~/misReports/frmackrpt.aspx">10) Acknowledgement Report</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink121" Visible="true" runat="server" NavigateUrl="~/misReports/frmredelrpt.aspx">11) Redelivery Report</asp:HyperLink></li> 
+        <%-- <li style="text-align: left"><asp:HyperLink ID="HyperLink49"  runat="server" NavigateUrl="~/misReports/frmgpjsmpna.aspx">l)DSD(Pune & JMS)</asp:HyperLink></li> --%>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink146" Visible="true" runat="server" NavigateUrl="~/misReports/frmdatewisedsd.aspx">12) DSD Summary</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink151" Visible="true" runat="server" NavigateUrl="~/misReports/frmpartywisedelsum.aspx">13) Partywise Summary</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink153" Visible="true" runat="server" NavigateUrl="~/misReports/frmdeductiondSd.aspx">14) Deduction in DSD</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink21" Visible="false" runat="server" NavigateUrl="~/misReports/DCwithoutGP.aspx">15) DC Without Gatepass</asp:HyperLink></li> 
+          <li style="text-align: left"><asp:HyperLink ID="HyperLink23" Visible="true" runat="server"  NavigateUrl="~/misReports/DCwithoutGPT.aspx">16) DC Without Gatepass</asp:HyperLink>    </li>    
+          <li style="text-align: left"><asp:HyperLink ID="gatebhupi" Visible="false" runat="server" NavigateUrl="~/Reports/frmgptbbbhupi.aspx">17) DELIVERY TBB</asp:HyperLink></li> 
+          <li style="text-align: left"><asp:HyperLink ID="HyperLink35" Visible="true" runat="server" NavigateUrl="~/misReports/vehicledc.aspx">18) Vehicle DC report</asp:HyperLink></li> 
+          <li style="text-align: left"><asp:HyperLink ID="HyperLink38" Visible="true" runat="server" NavigateUrl="~/misReports/pendingPOD.aspx">19) Pending POD Collected Summary</asp:HyperLink></li> 
+          <li class="sublast" style="text-align: left"><asp:HyperLink ID="HyperLink40" Visible="true" runat="server" NavigateUrl="~/misReports/vehiclelocal.aspx">20) vehiclelocalchallan & DC</asp:HyperLink></li> 
+    </ul>
+    </li> 
+      <li class="subfirst" style="text-align: left"> <a href="#"><span>5. Pre Print Rpts</span></a>
+      <ul>
+             <li class="subfirst" style="text-align: left"><asp:HyperLink ID="HyperLink96" Visible="true" runat="server" NavigateUrl="~/Reports/PP_GR_Road.aspx">1) CLN Report</asp:HyperLink></li>
+              <li style="text-align: left"><asp:HyperLink ID="HyperLink97" Visible="true" runat="server" NavigateUrl="~/Reports/PP_Challan_Road.aspx">2) Manifest Report</asp:HyperLink></li>
+              <li style="text-align: left"><asp:HyperLink ID="DH" Visible="false"  runat="server" NavigateUrl="~/Reports/PP_Challan_Road_DH.aspx">3) Manifest Delhi Hub</asp:HyperLink></li>
+             <%--<li style="text-align: left"> <asp:HyperLink ID="DHV" Visible="false"  runat="server" NavigateUrl="~/Reports/prechallanDHV.aspx">b)Manifest Delhi Hub</asp:HyperLink></li>--%>
+              <li style="text-align: left"> <asp:HyperLink ID="HyperLink98" Visible="true" runat="server" NavigateUrl="~/Reports/prelorry.aspx">4) Lorry Report</asp:HyperLink></li>
+              <li style="text-align: left"><asp:HyperLink ID="HyperLink99" Visible="true" runat="server" NavigateUrl="~/reports/prearrival.aspx">5) Unloading Report</asp:HyperLink></li>
+              <li style="text-align: left"><asp:HyperLink ID="HyperLink100" Visible="true" runat="server" NavigateUrl="~/Reports/Gatepasspreprint.aspx">6) Gatepass Report</asp:HyperLink></li>
+             <li style="text-align: left"> <asp:HyperLink ID="HyperLink101" Visible="true" runat="server" NavigateUrl="~/reports/predc.aspx">7) Delivery Challan</asp:HyperLink></li>
+             <%--<li style="text-align: left"> <asp:HyperLink ID="HyperLink102" Visible="true" runat="server" NavigateUrl="~/EntryForms/billpreprint.aspx">8)Bill Report</asp:HyperLink></li>
+             <li style="text-align: left"> <asp:HyperLink ID="HyperLink103" Visible="true" runat="server" NavigateUrl="~/EntryForms/frmcandfpreprint.aspx">9)Logistics Bill Report</asp:HyperLink>     </li>--%>
+             <li style="text-align: left"> <asp:HyperLink ID="HyperLink104" Visible="true" runat="server" NavigateUrl="~/EntryForms/crReport.aspx">8) CR Report</asp:HyperLink>  </li>
+             <li style="text-align: left"> <asp:HyperLink ID="HyperLink39" Visible="true" runat="server" NavigateUrl="~/misReports/prepaidpreprint.aspx">9) Prepaid bill A4 print</asp:HyperLink>  </li>
+             <li style="text-align: left"> <asp:HyperLink ID="amar1" Visible="False" runat="server" NavigateUrl="~/Reports/amaraja.aspx">10) Amara Raja Bill A4 Print</asp:HyperLink></li>
+             <li style="text-align: left"> <asp:HyperLink ID="amar2" Visible="False" runat="server" NavigateUrl="~/Reports/amarajasec.aspx">11) Amara Raja secondary Bill A4 Print</asp:HyperLink></li>
+             <li class="sublast" style="text-align: left"> <asp:HyperLink ID="HyperLink60" Visible="true" runat="server" NavigateUrl="~/Reports/otis.aspx">12) Otis Bill Preprint</asp:HyperLink></li>
+             <li class="sublast" style="text-align: left"> <asp:HyperLink ID="HyperLink70" Visible="true" runat="server" NavigateUrl="~/Reports/billprinta4.aspx">13) Bill Print A4</asp:HyperLink></li>
+      </ul>
+      </li> 
+      <li class="subfirst" style="text-align: left"> <a href="#"><span>6. Collection Rpts</span></a>
+      <ul>
+        <li class="subfirst" style="text-align: left">  <asp:HyperLink ID="HyperLink90" Visible="true" runat="server" NavigateUrl="~/misReports/frmpaycdedsum.aspx">1) Collection</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink110" Visible="true" runat="server" NavigateUrl="~/misReports/frmdedsummary.aspx">2) Deduction</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink127" Visible="true" runat="server" NavigateUrl="~/misReports/frmadhopening.aspx">3) ADHOC Opening</asp:HyperLink> </li>  
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink106" Visible="true" runat="server" NavigateUrl="~/misReports/frmadhbwdt.aspx">4) ADHOC Cumulative List</asp:HyperLink>  </li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink134" Visible="true" runat="server" NavigateUrl="~/misReports/frmadhadj.aspx">5) ADHOC Details</asp:HyperLink>  </li> 
+          <li style="text-align: left"><asp:HyperLink ID="HyperLink138" Visible="true" runat="server" NavigateUrl="~/misReports/frmadhadj.aspx">6) ADHOC With Adjustments</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink131" Visible="true" runat="server" NavigateUrl="~/misReports/frmpartywiseadhsum.aspx">7) Partywise Summary</asp:HyperLink>  </li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink139" Visible="true" runat="server" NavigateUrl="~/Reports/DCRREPORT.aspx">8) Daily Collection Report</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="DailyCollection"  visible="True" runat="server" NavigateUrl="~/Reports/DepositDetailsrptBranch.aspx">9) Daily Collection Rpt(Branch Wise)</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="NorthCollectionRpt"  visible="false"  runat="server" NavigateUrl="~/Reports/DepositDetailsrpt.aspx">9) Daily Collection Rpt(Zone/Branch Wise)</asp:HyperLink></li> 
+        <li class="sublast" style="text-align: left"> <asp:HyperLink ID="validate1" Visible="true" runat="server" NavigateUrl="~/misReports/validatereceipt.aspx">10) Validate Report</asp:HyperLink></li> 
+        </ul> 
+        </li> 
+     <li class="subfirst" style="text-align: left"> <a href="#"><span>7. Pending Ack</span></a> 
+     <ul>
+      <li class="subfirst" style="text-align: left"><asp:HyperLink ID="HyperLink81" Visible="true" runat="server" NavigateUrl="~/Reports/frmpackpartywise.aspx">1) Partywise Pending Ack</asp:HyperLink>
+      <%--<li style="text-align: left"><asp:HyperLink ID="HyperLink82" Visible="true" runat="server" NavigateUrl="~/Reports/frmpackdestwise.aspx">b)Destination Wise Pending Ack</asp:HyperLink></li>--%>
+      </li> 
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink82" Visible="true" runat="server" NavigateUrl="~/Reports/frmpackdestwise.aspx">2) Source/Destination Wise Pending Ack</asp:HyperLink></li>
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink5" Visible="true" runat="server" NavigateUrl="~/misReports/frmpartywisepack.aspx">3) Shipment Wise/Party wise Pending Ack</asp:HyperLink></li>
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink144" Visible="true" runat="server" NavigateUrl="~/misReports/frmpackfrt.aspx">4) Pending Ack(Frt Others Amt)</asp:HyperLink></li>
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink4" Visible="true" runat="server" NavigateUrl="~/misReports/frmpackvsdelvsundel.aspx">5) Pending Ack with Delivery Details</asp:HyperLink></li>
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink22" Visible="true" runat="server" NavigateUrl="~/Reports/unbilledtbbdt.aspx">6) Destination/Source Wise Pending Ack</asp:HyperLink></li>
+      <li class="sublast" style="text-align: left"> <asp:HyperLink ID="HyperLink36" Visible="true" runat="server" NavigateUrl="~/misReports/tbbreportdest.aspx">7) PENDING TBB AND TBB DESTINATION/</asp:HyperLink></li> 
+     </ul> 
+     </li> 
+      
+      <li class="subfirst" style="text-align: left"> <a href="#"><span>8. Pending Dly</span></a>
+      <ul>
+             <li class="subfirst" style="text-align: left"><asp:HyperLink ID="HyperLink115" Visible="true" runat="server" NavigateUrl="~/misReports/frmpacktopay.aspx">1)Destinationwise Pending</asp:HyperLink></li> 
+     </ul> 
+     </li> 
+     
+      <li class="subfirst" style="text-align: left"> <a href="#"><span>9. Stock Rpts</span></a>
+      <ul>
+      <li class="subfirst" style="text-align: left"> <asp:HyperLink ID="HyperLink109" Visible="true" runat="server" NavigateUrl="~/misReports/frmstockconsi.aspx">1) Consignor Wise</asp:HyperLink></li> 
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink61" Visible="true" runat="server" NavigateUrl="~/misReports/frmstocksummary.aspx">2) Stock Summary</asp:HyperLink></li> 
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink7" Visible="true" runat="server" NavigateUrl="~/misReports/frmstockrpt.aspx">3) Grwise Stock</asp:HyperLink></li> 
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink145" Visible="true" runat="server" NavigateUrl="~/misReports/frmtranshipment.aspx">4) Transhipment Stock</asp:HyperLink></li> 
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink148" Visible="true" runat="server" NavigateUrl="~/misReports/frmstktmp.aspx">5) Stock(All)</asp:HyperLink></li> 
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink152" Visible="true" runat="server" NavigateUrl="~/misReports/frmstkconsiagewise.aspx">6) Agewise Stock</asp:HyperLink></li> 
+     <li style="text-align: left"> <asp:HyperLink ID="HyperLink28" Visible="true" runat="server" NavigateUrl="~/misReports/frmstockondate.aspx">7) Stock On Date</asp:HyperLink></li> 
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink29" Visible="true"  runat="server"  NavigateUrl="~/Reports/stock.aspx?Value=STKCNOR">8) Delivery Stock</asp:HyperLink></li> 
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink30"  Visible ="true"  runat="server"  NavigateUrl="~/Reports/stockjp.aspx?Value=STKCNOR">9) Delivery Stock Consignor/Destination Wise</asp:HyperLink></li> 
+     <li class="sublast" style="text-align: left">  <asp:HyperLink ID="HyperLink9" Visible="true" runat="server" NavigateUrl="~/misReports/topayundelivered.aspx">10) To pay Undelivered</asp:HyperLink></li> 
+    </ul>
+    </li>     
+     
+        
+         <li class="subfirst" style="text-align: left"> <a href="#">  <span>10. Outstanding</span></a> 
+     <ul>
+      
+        <%-- <li class="subfirst" style="text-align: left"><asp:HyperLink ID="HyperLink88" Visible="true" runat="server" NavigateUrl="~/misReports/frmoutssum.aspx">a)Summary </asp:HyperLink></li>--%>
+         <%--<li style="text-align: left"><asp:HyperLink ID="HyperLink89" Visible="true" runat="server" NavigateUrl="~/misReports/frmbillwiseouts.aspx">1)Billwise </asp:HyperLink></li> --%>
+        <li class="subfirst" style="text-align: left"> <asp:HyperLink ID="HyperLink126" Visible="true" runat="server" NavigateUrl="~/misReports/frmoutstanding.aspx">1) As on Yesterday</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink44" Visible="true" runat="server" NavigateUrl="~/misReports/frmoutstandingbillsubmit.aspx">2) As on Yesterday Bill Submit To Customer</asp:HyperLink>
+        <%--<li style="text-align: left"> <asp:HyperLink ID="HyperLink105" Visible="true" runat="server" NavigateUrl="~/misReports/frmover90dayssum.aspx">3)Over90Days Summary</asp:HyperLink></li>--%>
+         </li> 
+         <%--<li style="text-align: left"><asp:HyperLink ID="HyperLink79" Visible="true" runat="server" NavigateUrl="~/misReports/sflcoveringout.aspx">2.1)As on Yesterday Gr No. Wise</asp:HyperLink></li>--%>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink87" Visible="true" runat="server" NavigateUrl="~/misReports/frm90daysdet.aspx">3) Over90Days Billwise</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="o3" Visible="true" runat="server" NavigateUrl="~/misReports/frm60daysdet.aspx">3.1) Over45Days Billwise</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink119" Visible="true" runat="server" NavigateUrl="~/misReports/frmprepaidos.aspx">4) Prepaid Outstanding</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink128" Visible="true" runat="server" NavigateUrl="~/misReports/frmoutstax.aspx">5) Servicetax Outstanding</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink105" Visible="true" runat="server" NavigateUrl="~/misReports/frmover90dayssum.aspx">6) Over90Days Summary</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="o2" Visible="true" runat="server" NavigateUrl="~/misReports/outstandingcustomerwise.aspx">7) Ledger</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink10" Visible="true" runat="server" NavigateUrl="~/misReports/topayautoos.aspx">8) To pay Auto Outstanding</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="o1" Visible ="false"  runat="server" NavigateUrl="~/misReports/frmover60dayssum.aspx">9) Over60Days Summary</asp:HyperLink></li>
+         <li class="sublast"  style="text-align: left"><asp:HyperLink ID="HyperLink54" Visible ="true"  runat="server" NavigateUrl="~/misReports/pending.aspx">10) Pending</asp:HyperLink></li>
+          </ul>
+          </li>           
+          <li class="subfirst" style="text-align: left"> <a href="#"> <span>11. Billing & Colln</span></a> 
+         <ul> 
+         <li class="subfirst" style="text-align: left"> <asp:HyperLink ID="HyperLink113" Visible="true" runat="server" NavigateUrl="~/misReports/frmledger.aspx">1) Billing & Collection</asp:HyperLink>          </li> 
+         <li class="sublast"  style="text-align: left"><asp:HyperLink ID="HyperLink25" Visible="true" runat="server" NavigateUrl="~/misReports/frm90daysdetcr.aspx">2) Collection Detail on Over 90 Days Bills</asp:HyperLink> </li>
+         </ul>
+         </li> 
+      
+      <li class="subfirst" style="text-align: left"> <a href="#"> <span>12. Unloading</span></a> 
+      <ul>
+         <li class="subfirst" style="text-align: left"> <asp:HyperLink ID="HyperLink112" Visible="true" runat="server" NavigateUrl="~/misReports/arrivalReport.aspx">1) Arrival Report</asp:HyperLink>   </li>        
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink73" Visible="true" runat="server" NavigateUrl="~/misReports/unloadbetweendates.aspx">2) Short Excess</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink122" Visible="true" runat="server" NavigateUrl="~/misReports/frmarrpkg.aspx">3) In/Out Packs Summary</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink123" Visible="true" runat="server" NavigateUrl="~/misReports/frmarrcuswise.aspx">4) Arrivalnowise Details</asp:HyperLink>
+         <%--<li style="text-align: left"><asp:HyperLink ID="BookingDelete" runat="server" NavigateUrl="~/EntryForms/BookingDelCs.aspx">Booking Delete</asp:HyperLink></li>--%>
+         </li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink149" Visible="true" runat="server" NavigateUrl="~/misReports/frmunlchgreg.aspx">5) UnlChg Register</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink150" Visible="true" runat="server" NavigateUrl="~/misReports/frmunlpartywise.aspx">6) Partywise Summary</asp:HyperLink></li>
+          <li style="text-align: left"><asp:HyperLink ID="HyperLink45" Visible="true" runat="server" NavigateUrl="~/misReports/arrivalbtwdate.aspx">7) Arrival Details</asp:HyperLink></li>
+         <li  style="text-align: left"><asp:HyperLink ID="HyperLink71" Visible="true" runat="server" NavigateUrl="~/misReports/express.aspx">8) Additional Charges Reports</asp:HyperLink></li>
+         <li class="sublast"  style="text-align: left"><asp:HyperLink ID="HyperLink80" Visible="true" runat="server" NavigateUrl="~/Reports/DriverBonus.aspx">9) Driver Bonus / Express Charges Reports</asp:HyperLink></li>
+        </ul> 
+      </li> 
+          
+       <li class="subfirst" style="text-align: left"> <a href="#"><span>13. All Reports</span></a>     
+       <ul >
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="Allrptn" Visible="true" runat="server"  NavigateUrl="~/Reports/allrptn.aspx">1) All In One Reports</asp:HyperLink></li> 
+      </ul>
+      </li> 
+       
+       <%--<li class="subfirst" style="text-align: left"> <a href="#">      <span>13. Lucas Rpts</span></a>
+       <ul>
+         <li class="subfirst" style="text-align: left"><asp:HyperLink ID="lu1"  runat="server" Visible="False" NavigateUrl="~/lucas/arrivalReport.aspx">a)Arrival Report</asp:HyperLink></li>          
+         <li style="text-align: left"><asp:HyperLink ID="lu2"  runat="server" Visible="False" NavigateUrl="~/lucas/deliveryReport.aspx">b)Delivery Report</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="lu3"  runat="server" Visible="False" NavigateUrl="~/lucas/grnoDetails.aspx">c)CLN Query</asp:HyperLink>          </li>
+         <li style="text-align: left"><asp:HyperLink ID="lu4"  runat="server" Visible="False" NavigateUrl="~/lucas/invoiceDetails.aspx">d)Invoice Query</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="lu5"  runat="server" Visible="False" NavigateUrl="~/lucas/intransReport.aspx">e)Intransit Report</asp:HyperLink></li>
+         <li class="sublast"  style="text-align: left"><asp:HyperLink ID="lu6"  runat="server" Visible="False" NavigateUrl="~/misReports/DeliveryGp.aspx">f)DeliveryGP Report</asp:HyperLink></li>
+      </ul>
+      </li>
+      <li class="subfirst" style="text-align: left"> <a href="#"><span>14. AO Reports</span></a>
+      <ul>
+       <li class="subfirst" style="text-align: left"><asp:HyperLink ID="ao1" runat="server" Visible="False" NavigateUrl="~/ReportsAO/BookingAuditReport.aspx">a)Booking Audit</asp:HyperLink></li>
+       <li style="text-align: left"> <asp:HyperLink ID="ao2" runat="server" Visible="False" NavigateUrl="~/ReportsAO/auditReport.aspx">b)Booking Audit as on</asp:HyperLink></li>
+        <li class="sublast"  style="text-align: left"><asp:HyperLink ID="ao1" runat="server" Visible="False" NavigateUrl="~/ReportsAO/Auditrepert.aspx">BOOKING AUDIT REPORT</asp:HyperLink></li>
+      </ul>
+      </li>--%>
+      
+      <%--<li class="subfirst" style="text-align: left"> <a href="#">--%>
+      
+     
+     </ul> 
+     </li>
+     <li class="topmenu" style="text-align: left"><a href="#">MIS Reports</a>
+     <ul>
+         <li class="subfirst" style="text-align: left"> <a href="#">        <span>1. Admin Rpts</span></a> 
+        <ul>
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="tally2" Visible="false"  runat="server" NavigateUrl="~/reports/tallytrbank.aspx">1) TWL TO TALLY (BANK)</asp:HyperLink></li>
+        <li class="subfirst" style="text-align: left"><asp:HyperLink ID="md1"  runat="server" Visible="False" NavigateUrl="~/misReports/frmbookingsouth.aspx">2) Booking Summary</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="md2"  runat="server" Visible="False" NavigateUrl="~/misReports/frmbillingsouth.aspx">3) Billing Summary</asp:HyperLink></li>
+         <%--<li style="text-align: left"><asp:HyperLink ID="md3"  runat="server" Visible="False" NavigateUrl="~/misReports/bookingSumReportMD.aspx">3)Consolidated Booking Statistics</asp:HyperLink></li>--%>
+         <li style="text-align: left"><asp:HyperLink ID="md4"  runat="server" Visible="False" NavigateUrl="~/misReports/deliverySumReportMD.aspx">4) Consolidated Delivery Statistics (DC)</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="md5"  runat="server" Visible="False" NavigateUrl="~/misReports/deliverySumGpReportMD.aspx">5) Consolidated Delivery Statistics (GP)</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="md6"  runat="server" Visible="False" NavigateUrl="~/misReports/frmbranchoutsall.aspx">6) Branchwise Outstanding</asp:HyperLink></li>  
+         <li style="text-align: left"><asp:HyperLink ID="mde"  runat="server" Visible="False" NavigateUrl="~/misReports/frmoutsdiff.aspx">7) Outstanding Comp</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="mdf"  runat="server" Visible="False" NavigateUrl="~/misReports/frmover90comp.aspx">8) Over 90 Days Outs Comp</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="mdgg"  runat="server" Visible="False" NavigateUrl="~/misReports/frm90daysdetcr.aspx">9) Collection Detail on Over 90 Days Bills</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="mdhh"  runat="server" Visible="False" NavigateUrl="~/misReports/frmhaswthgrfrt.aspx">10) HAS with Freight Comp</asp:HyperLink></li>          
+         <li style="text-align: left"><asp:HyperLink ID="mdg"  runat="server" Visible="False" NavigateUrl="~/misReports/frmpendackall.aspx">11) Pending Ack(frt-oth-tot)</asp:HyperLink></li>  
+         <li style="text-align: left"><asp:HyperLink ID="mdh"  runat="server" Visible="False" NavigateUrl="~/misReports/frmdeliverysumall.aspx">12) Branchwise Delivery</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="mdk"  runat="server" Visible="False" NavigateUrl="~/northmisreport11/frmobrcmd.aspx">13) Billing & Collection </asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="md7"  runat="server" Visible="False" NavigateUrl="~/misReports/frmpayallsum.aspx">14) Branchwise Payment</asp:HyperLink></li>  
+         <li style="text-align: left"><asp:HyperLink ID="md8"  runat="server" Visible="False" NavigateUrl="~/misReports/frmcummulativebkg.aspx">15) Cummulative Booking</asp:HyperLink></li>  
+         <li style="text-align: left"><asp:HyperLink ID="md9"  runat="server" Visible="False" NavigateUrl="~/misReports/frmbookingdel.aspx">16) Booking & Delivery</asp:HyperLink></li>  
+         <li style="text-align: left"><asp:HyperLink ID="mda"  runat="server" Visible="False" NavigateUrl="~/misReports/frmhasvsfrt.aspx">17) HAS With Freight(Customerwise Road/Jit)</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="mdaa"  runat="server" Visible="False" NavigateUrl="~/misReports/frmhasvsfrt_air.aspx">18) HAS With Freight(Customerwise Air/Train)</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="md10"  runat="server" Visible="False" NavigateUrl="~/misReports/frmpackzone.aspx">19) Zonewise Pending</asp:HyperLink></li>  
+          <li style="text-align: left"><asp:HyperLink ID="mda1"  runat="server" Visible="False" NavigateUrl="~/misReports/zonetbbdestpen.aspx">20) Zonewise Pending Tbb at destination</asp:HyperLink></li>  
+         <li style="text-align: left"><asp:HyperLink ID="md11"  runat="server" Visible ="False" NavigateUrl="~/Reports/frmpackalldestwise.aspx">21) Shipmentwise Pending Ack</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="md12"  runat="server" Visible ="False" NavigateUrl="~/misReports/frmdso.aspx">22) DSO</asp:HyperLink></li>
+         <%--<li style="text-align: left"><asp:HyperLink ID="md13"  runat="server" Visible="False" NavigateUrl="~/misReports/frmbusiness.aspx">21)Business Report</asp:HyperLink></li>--%>
+         <li style="text-align: left"><asp:HyperLink ID="md14"  runat="server" Visible="False" NavigateUrl="~/Reports/ZonalBKDAll.aspx">23) Zone Wise Booking Details</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="md15"  runat="server" Visible ="False" NavigateUrl="~/misReports/tincomingexp.aspx">24) Truck Incoming Expenses</asp:HyperLink></li>
+          <li style="text-align: left"><asp:HyperLink ID="md16"  runat="server" Visible ="False" NavigateUrl="~/misReports/toutgoingexp.aspx">25) Truck Outgoing Expenses</asp:HyperLink></li>
+          <li style="text-align: left"><asp:HyperLink ID="md17"  runat="server" Visible ="False" NavigateUrl="~/misReports/llbranchsum.aspx">26) Lhire Branch Summary</asp:HyperLink></li>
+          <li style="text-align: left"><asp:HyperLink ID="md18"  runat="server" Visible ="False" NavigateUrl="~/misReports/lchallan_branch_summary.aspx">27) Lchallan Branch Summary</asp:HyperLink></li>
+           <li style="text-align: left"><asp:HyperLink ID="md19"  runat="server" Visible ="False" NavigateUrl="~/misReports/dcbranchsum.aspx">28) Delivery challan Branch Summary</asp:HyperLink></li>    
+           <li style="text-align: left"><asp:HyperLink ID="a15"  runat="server" Visible="False" NavigateUrl="~/misReports/frmoutsadhsum.aspx">29) Outsanding Report</asp:HyperLink></li>
+           <li style="text-align: left"><asp:HyperLink ID="a18"  runat="server" Visible="False" NavigateUrl="~/misReports/candfd.aspx">30) C And F Bill Report</asp:HyperLink></li>
+           <li style="text-align: left"><asp:HyperLink ID="a7"  runat="server" Visible="False" NavigateUrl="~/misReports/frm90daysdetcr.aspx">31) Collection Detail on Over 90 Days Bills</asp:HyperLink></li>
+            <li style="text-align: left"><asp:HyperLink ID="a8"  runat="server" Visible="False" NavigateUrl="~/misReports/frm60daysdetcr.aspx">32) Collection Detail on Over 60 Days Bills</asp:HyperLink></li>
+           <li style="text-align: left"><asp:HyperLink ID="a22"  runat="server" Visible="False" NavigateUrl="~/misReports/deductionbranchwise.aspx">33) DEDUCTION ALL REMARKS BRANCHWISE</asp:HyperLink></li> 
+           <li style="text-align: left"><asp:HyperLink ID="zonaldeduct"  runat="server" Visible="False" NavigateUrl="~/Reports/deductionzonal.aspx">34) Zonal Deduction Rpt</asp:HyperLink></li> 
+           <li style="text-align: left"><asp:HyperLink ID="circlebooking"  runat="server" Visible="False" NavigateUrl="~/misReports/bookingcircle.aspx">35) CIRCLEWISE BOOKING</asp:HyperLink></li>
+           <li style="text-align: left"><asp:HyperLink ID="pre"  runat="server" Visible="False" NavigateUrl="~/misReports/prepaid_collection.aspx">36) Prepaid Collection Summary</asp:HyperLink></li>
+           <li style="text-align: left"><asp:HyperLink ID="pending"  runat="server" Visible="False" NavigateUrl="~/misReports/pendingcoolie.aspx">37) Pending Coolie</asp:HyperLink></li>
+           <li style="text-align: left"><asp:HyperLink ID="profit"  runat="server" Visible="False" NavigateUrl="~/misReports/profitabiltygr.aspx">38) Profitability</asp:HyperLink></li>
+           <li style="text-align: left"><asp:HyperLink ID="addition"  runat="server" Visible="False" NavigateUrl="~/misReports/additionalchargesreport.aspx">39) Additional Charges Report</asp:HyperLink></li>
+           <li style="text-align: left"><asp:HyperLink ID="outbra1"  runat="server" Visible="False" NavigateUrl="~/misReports/outstandingdelallbra.aspx">40) Outstaning all branch</asp:HyperLink></li>
+           <li class="sublast" style="text-align: left"><asp:HyperLink ID="recon"  runat="server" Visible="False" NavigateUrl="~/misReports/bfh.aspx">41) Reconcilation Report</asp:HyperLink></li>
+           <li class="sublast" style="text-align: left"><asp:HyperLink ID="bilstax"  runat="server" Visible="False" NavigateUrl="~/misReports/billstaxpro.aspx">42) Billing Detail For Service Tax</asp:HyperLink></li>
+           <li class="sublast" style="text-align: left"><asp:HyperLink ID="incllh1"  runat="server" Visible="False" NavigateUrl="~/misReports/incidentalllh2.aspx">43) Incidental LLH & DC</asp:HyperLink></li>
+        <li class="subfirst" style="text-align: left"><asp:HyperLink ID="cf1"  runat="server" Visible="False" NavigateUrl="~/misReports/Penacksum.aspx">44) Pendingackall</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it15"  runat="server" Visible="False" NavigateUrl="~/misReports/ledgerprint.aspx">45) LEDGER PRINT</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="cf2"  runat="server" Visible="False" NavigateUrl="~/Reports/UnBill_DLV_ToPay.aspx">46) To Pay UnDelivered & UnBilled</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="cf3"  runat="server" Visible="False" NavigateUrl="~/Reports/ToPayreport.aspx">47) To Pay Report</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="cf5"  runat="server" Visible="False" NavigateUrl="~/Reports/GRStatusSumm.aspx">48) GR Status</asp:HyperLink></li>
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="cf6"  runat="server" Visible="False" NavigateUrl="~/misReports/Penacksumtbbdestcfo.aspx">49) Pendingackall TBB At Destination</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="fundissued" Visible="false" runat="server" NavigateUrl="~/misReports/chequedetailadmin.aspx">50) Fund Issued</asp:HyperLink></li> 
+        
+          
+          
+          
+          <%--<li style="text-align: left"><asp:HyperLink ID="a1"  runat="server" Visible="False" NavigateUrl="~/misReports/bookingSumReport.aspx">a)Consolidated Booking Statistics for South</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="a2"  runat="server" Visible="False" NavigateUrl="~/misReports/deliverySumReport.aspx">b)Consolidated Delivery Statistics (DC) for South</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="a3"  runat="server" Visible="False" NavigateUrl="~/misReports/deliverySumGpReport.aspx">c)Consolidated Delivery Statistics (GP) for South</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="a4"  runat="server" Visible="False" NavigateUrl="~/misReports/frmbranchouts.aspx">d)Branchwise Outstanding</asp:HyperLink></li>  
+         <li style="text-align: left"><asp:HyperLink ID="a5"  runat="server" Visible="False" NavigateUrl="~/misReports/frmoutsdiff.aspx">e)Outstanding Comp</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="a6"  runat="server" Visible="False" NavigateUrl="~/misReports/frmover90comp.aspx">f)Over 90 Days Outs Comp</asp:HyperLink></li>  
+         <li style="text-align: left"><asp:HyperLink ID="a7"  runat="server" Visible="False" NavigateUrl="~/misReports/frm90daysdetcr.aspx">g)Collection Detail on Over 90 Days Bills</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="a8"  runat="server" Visible="False" NavigateUrl="~/misReports/frmhaswthgrfrt.aspx">h)HAS with Freight Comp</asp:HyperLink></li>          
+         <li style="text-align: left"><asp:HyperLink ID="a9"  runat="server" Visible="False" NavigateUrl="~/misReports/frmpendacksouth.aspx">i)Pending Ack for South</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="a10"  runat="server" Visible="False" NavigateUrl="~/misReports/frmdelsumsouth.aspx">j)Delivery for South</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="a11"  runat="server" Visible="False" NavigateUrl="~/misReports/frmobrcsouth.aspx">k)Billing & Collection for South</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="a12"  runat="server" Visible="False" NavigateUrl="~/misReports/frmpaysouth.aspx">l)Payment Summary for South</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="a13"  runat="server" Visible="False" NavigateUrl="~/misReports/frmdelvsundelsum.aspx">m)Delivered & Undelivered Report</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="a14"  runat="server" Visible="False" NavigateUrl="~/misReports/frmhasvsfrt.aspx">n)HAS With Freight(Customerwise)</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="a16"  runat="server" Visible="False" NavigateUrl="~/Reports/FTLWITHBILL.aspx">p)Ftl With Bill Details</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="a17"  runat="server" Visible="False" NavigateUrl="~/Reports/ZonalBKDAdmin.aspx">q)Zone Wise Booking Details</asp:HyperLink></li>
+         <li class="sublast" style="text-align: left"><asp:HyperLink ID="a19"  runat="server" Visible="False" NavigateUrl="~/ReportsAO/Cr_Stax_sum.aspx">s)Zone Wise Service Tax</asp:HyperLink></li>
+        --%>
+              
+          
+              
+          </ul>                    
+      </li> 
+      
+       <li class="subfirst" style="text-align: left"> <a href="#">        <span>2. MMR Rpts</span></a> 
+       <ul>
+         <li class="subfirst" style="text-align: left"><asp:HyperLink ID="stax"  runat="server" Visible="False" NavigateUrl="~/misReports/candf_servicetax.aspx">1)Service Tax Summary</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="lhire"  runat="server" Visible="False" NavigateUrl="~/misReports/lorry_hire_all.aspx">2)Lorry Hire All</asp:HyperLink></li>
+         <li class="sublast" style="text-align: left"><asp:HyperLink ID="LHIS"  runat="server" Visible="False" NavigateUrl="~/misReports/LHIS_LLH_COST.aspx">3)LHIS & LLH COST</asp:HyperLink></li>
+         </ul>
+     </li> 
+      
+        <li class="subfirst" style="text-align: left"> <a href="#">        <span>3. North Rpts</span></a> 
+        <ul>
+         <li class="subfirst" style="text-align: left"><asp:HyperLink ID="n1"  runat="server" Visible="False" NavigateUrl="~/misReports/bookingSumReportnrth.aspx">1) Consolidated Booking Statistics</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="n2"  runat="server" Visible="False" NavigateUrl="~/misReports/deliverySumReportnrth.aspx">2) Consolidated Delivery Statistics (DC)</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="n3"  runat="server" Visible="False" NavigateUrl="~/misReports/deliverySumGpReportnrth.aspx">3) Consolidated Delivery Statistics (GP)</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="n4"  runat="server" Visible="False" NavigateUrl="~/misReports/frmbranchoutsnrth.aspx">4) Branchwise Outstanding</asp:HyperLink></li>  
+         <li style="text-align: left"><asp:HyperLink ID="n5"  runat="server" Visible="False" NavigateUrl="~/misReports/frmoutsdiff.aspx">5) Outstanding Comp</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="n6"  runat="server" Visible="False" NavigateUrl="~/misReports/frmover90comp.aspx">6) Over 90 Days Outs Comp</asp:HyperLink></li>  
+         <li style="text-align: left"><asp:HyperLink ID="n7"  runat="server" Visible="False" NavigateUrl="~/misReports/frm90daysdetcr.aspx">7) Collection Detail on Over 90 Days Bills</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="n8"  runat="server" Visible="False" NavigateUrl="~/misReports/frmhaswthgrfrt.aspx">8) HAS with Freight Comp</asp:HyperLink></li>          
+         <li style="text-align: left"><asp:HyperLink ID="n9"  runat="server" Visible="False" NavigateUrl="~/misReports/frmpendacknrth.aspx">9) Pending Ack</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="n10"  runat="server" Visible="False" NavigateUrl="~/misReports/frmdelsumnrth.aspx">10) Delivery</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="n11"  runat="server" Visible="False" NavigateUrl="~/misReports/frmobrcnorth.aspx">11) Billing & Collection</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="n12"  runat="server" Visible="False" NavigateUrl="~/misReports/frmpaynrth.aspx">12) Payment Summary</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="n13"  runat="server" Visible="False" NavigateUrl="~/misReports/frmbusinessnrth.aspx">13) Business Report</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="n15"  runat="server" Visible="False" NavigateUrl="~/misReports/frmdelsumnrth.aspx">14) Delivery for North</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="n14"  runat="server" Visible="False" NavigateUrl="~/Reports/ZonalBKDNorth.aspx">15) Zone Wise Booking Details</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="n16"  runat="server" Visible="False" NavigateUrl="~/ReportsAO/Cr_Stax_sum.aspx">16) Zone Wise Service Tax</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="n17"  runat="server" Visible="False" NavigateUrl="~/Reports/Missing_gr.aspx">17) Unused GR Report</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="n18"  runat="server" Visible="False" NavigateUrl="~/misReports/frmhaswthgrfrt.aspx">18) HAS with Freight Comp</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="n19"  runat="server" Visible="False" NavigateUrl="~/Reports/ZonalBKBILLCR.aspx">19) Zone Wise Booking Details with Bill & Receipt</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="n20"  runat="server" Visible="False" NavigateUrl="~/Reports/missing_has.aspx">20) Unused HAS Report</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="n21"  runat="server" Visible="False" NavigateUrl="~/Reports/deductionzonal.aspx">21) Zonal Deduction Rpt</asp:HyperLink></li> 
+         <%--<li style="text-align: left"><asp:HyperLink ID="n13"  runat="server" Visible="False" NavigateUrl="~/misReports/frmdelvsundelsum.aspx">m)Delivered & Undelivered Report</asp:HyperLink></li>--%>
+         <%--<li class="sublast" style="text-align: left"><asp:HyperLink ID="n14"  runat="server" Visible="False" NavigateUrl="~/misReports/frmhasvsfrt.aspx">n)HAS With Freight(Customerwise)</asp:HyperLink></li>--%>
+  </ul>
+ </li> 
+ 
+     <%--
+       <li class="subfirst" style="text-align: left"> <a href="#">        <span>4. CFO Rpts</span></a> 
+        <ul>
+        </ul>
+        
+     --%>         
+       
+        <%--<li class="subfirst" style="text-align: left"> <a href="#">
+        <span>2. STOCK RPTS</span></a>
+        <ul>
+        <li class="subfirst" style="text-align: left"><asp:HyperLink ID="ds" Visible="true"  runat="server"  NavigateUrl="~/Reports/stock.aspx?Value=STKCNOR">1)Delivery Stock</asp:HyperLink></li>
+         <li class="sublast" style="text-align: left"><asp:HyperLink ID="dsj"  Visible ="true"  runat="server"  NavigateUrl="~/Reports/stockjp.aspx?Value=STKCNOR">2)Delivery Stock Consignor/Destination Wise</asp:HyperLink></li>
+         </ul>
+         </li>--%>
+      
+      <li class="subfirst" style="text-align: left"> <a href="#">        <span>5. IT Modification</span>       </a> 
+      <ul>
+        <li style="text-align: left"><asp:HyperLink ID="it2"  runat="server" Visible="False" NavigateUrl="~/EntryForms/Bookingmodify01upd1415.aspx">1) Booking Modify</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it3"  runat="server" Visible="False" NavigateUrl="~/EntryForms/BillingCsUpdVen1011.aspx">2) Billing Modify</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it9"  runat="server" Visible="False" NavigateUrl="~/EntryForms/Customeradd1314.aspx">3) Customer Add</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it4"  runat="server" Visible="False" NavigateUrl="~/EntryForms/GridChallanCSUpd1415.aspx">4) Challan Modify</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it6"  runat="server" Visible="False" NavigateUrl="~/EntryForms/UnloadingCsUpd.aspx">5) Unloading Modify</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it7"  runat="server" Visible="False" NavigateUrl="~/EntryForms/DeliveryChallanCsUpd.aspx">6) Delivery Challan Modify</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it8"  runat="server" Visible="False" NavigateUrl="~/EntryForms/GatePassCSHupdVen1011.aspx">7) GatePass Modify</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it10"  runat="server" Visible="False" NavigateUrl="~/EntryForms/GrNumberEntryVen1011.aspx">8) CLN NUMBER ENTRY</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it19"  runat="server" Visible="False" NavigateUrl="~/EntryForms/HasNumberEntryVen1011.aspx">9) HAS NUMBER ENTRY</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it11"  runat="server" Visible="False" NavigateUrl="~/EntryForms/Lorrycsupd.aspx">10) Lorry Modify</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it20"  runat="server" Visible="False" NavigateUrl="~/EntryForms/contractentryit208.aspx">11) CONTRACT ENTRY</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it21"  runat="server" Visible="False" NavigateUrl="~/EntryForms/PartyMR.aspx">12) Customer Modify</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it14"  runat="server" Visible="False" NavigateUrl="~/EntryForms/TwlWebUser.aspx">13) User Right</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it22"  runat="server" Visible="False" NavigateUrl="~/EntryForms/customerct1314upd.aspx">14) Update Contract</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="broker" Visible="false" runat="server" NavigateUrl="~/EntryForms/Broker.aspx">15) Broker Add</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="vendor" Visible="false" runat="server" NavigateUrl="~/EntryForms/vendorcsit.aspx">16) Vendor Add</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="user" Visible="false" runat="server" NavigateUrl="~/EntryForms/newuser.aspx">17) Newuser</asp:HyperLink></li>
+        <li  style="text-align: left"><asp:HyperLink ID="user1" Visible="false" runat="server" NavigateUrl="~/EntryForms/newuserupd.aspx">18) User Upd</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="cancelcr"  Visible="false" runat="server" NavigateUrl="~/EntryForms/ReceiptCancel.aspx?Value=CASH">19) Cancel Cash Receipt</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="cancelbr"  visible="false" runat="server" NavigateUrl="~/EntryForms/ReceiptCancel.aspx?Value=BANK">20) Cancel Bank Receipt</asp:HyperLink></li>         
+        <li style="text-align: left"><asp:HyperLink ID="it6f"  visible="false" runat="server" NavigateUrl="~/EntryForms/Unloading1415UPD.aspx">21) Unloading Update Some Field</asp:HyperLink></li>         
+        
+      </ul>
+      </li> 
+        
+      <li class="subfirst" style="text-align: left"> <a href="#">        <span>6. IT Rpts</span>       </a> 
+      <ul>
+        <li style="text-align: left"><asp:HyperLink ID="it13"  runat="server" Visible="False" NavigateUrl="~/misReports/frmtositvsdrb.aspx">1) DRB Report</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it16"  runat="server" Visible="False" NavigateUrl="~/Reports/outstanding_Branchwise_Between_date.aspx">2) OUTSUM(Under Progress)</asp:HyperLink></li>         
+        <li style="text-align: left"><asp:HyperLink ID="it17"  runat="server" Visible="False" NavigateUrl="~/Reports/outstanding_Between_date_Region_Wise.aspx">3) REGION WISE OUT SUM(Under Progress)</asp:HyperLink></li>         
+        <li style="text-align: left"><asp:HyperLink ID="it18"  runat="server" Visible="False" NavigateUrl="~/Reports/outstanding_Bill_Wise.aspx">4) BILL WISE OUTSTANDING(Under Progress)</asp:HyperLink></li>         
+        <li style="text-align: left"><asp:HyperLink ID="it1"  runat="server" Visible="False" NavigateUrl="~/misReports/DCwithoutGP.aspx">5) DC Without Gatepass</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="a20"  runat="server" Visible="False" NavigateUrl="~/Reports/Missing_gr.aspx">6) Unused GR Report</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="a21"  runat="server" Visible="False" NavigateUrl="~/Reports/missing_has.aspx">7) Unused HAS Report</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it23"  runat="server" Visible="False" NavigateUrl="http://server/track/Query1112.aspx">8) Query</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="check1" Visible="false"  runat="server" NavigateUrl="~/EntryForms/GroupLedger.aspx?Value=Group">9) Create Group</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="check2" Visible="false" runat="server" NavigateUrl="~/EntryForms/GroupLedger.aspx?Value=Ledger">10) Create Ledger</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="check3" Visible="false" runat="server" NavigateUrl="~/EntryForms/Openac.aspx?Value=Opening">11) Create Openings</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="check4" Visible="false" runat="server" NavigateUrl="~/EntryForms/JVEntry.aspx">12) Journal Voucher</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="check5" Visible="false" runat="server" NavigateUrl="~/EntryForms/OpenAcLog.aspx">13) Debit Entry</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="check6" Visible="false" runat="server" NavigateUrl="~/EntryForms/payments.aspx?Value=Cash">14) Cash Payment</asp:HyperLink></li>
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="Podsubmissionupd"  runat="server" Visible="False" NavigateUrl="~/EntryForms/LorryAdvUpdPODSBMS.aspx">15) UpdatePOD Submission(Lorry Advance)</asp:HyperLink></li>
+        
+      </ul>
+      </li> 
+      <li class="subfirst" style="text-align: left"> <a href="#">        <span>7. IT MONTHLY RPTS</span></a> 
+      <ul>
+        <li class="subfirst" style="text-align: left"><asp:HyperLink ID="i1"  runat="server" Visible="False" NavigateUrl="~/misReports/lrvsgrfrt.aspx">1) LORRY VS GR FRT</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="i2"  runat="server" Visible="False" NavigateUrl="~/misReports/Despatch/frmtruckearning.aspx">2) Truck Earning Staement</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="it12"  runat="server" Visible="False" NavigateUrl="~/misReports/businessupdate.aspx">3) Business Report</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="f9"  runat="server" Visible="False" NavigateUrl="~/misReports/outstandingcustomerwise.aspx">4) Opening and Closing</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="iti"  runat="server" NavigateUrl="~/misReports/clncost.aspx">5) CLN Cost</asp:HyperLink></li>
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="tally1" Visible="false"  runat="server" NavigateUrl="~/reports/tallytr.aspx">6) TWL TO TALLY</asp:HyperLink></li>
+        <li class="subfirst" style="text-align: left"><asp:HyperLink ID="f1"  runat="server" Visible="False" NavigateUrl="~/misReports/undespalert.aspx">7) UNDESPATCH</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="f2"  runat="server" Visible="False" NavigateUrl="~/misReports/unarrivalalert.aspx">8) UNARRIVAL</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="f3"  runat="server" Visible="False" NavigateUrl="~/misReports/dcwithoutgatepass.aspx">9) DC WITHOUT GATEPASS</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="f4"  runat="server" Visible="False" NavigateUrl="~/misReports/gatepasstbbunbilled.aspx">10) GATEPASS UNBILLED</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="f5"  runat="server" Visible="False" NavigateUrl="~/misReports/creditunbilled.aspx">11) CREDIT UNBILLED</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="f6"  runat="server" Visible="False" NavigateUrl="~/misReports/lorryall.aspx">12) TRUCK ENGAGED</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="f7"  runat="server" Visible="False" NavigateUrl="~/misReports/prepaidout.aspx">13) PREPAID OUT</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="f8"  runat="server" Visible="False" NavigateUrl="~/misReports/topayauto.aspx">14) TOPAYAUTO OUT</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="f10"  runat="server" Visible="False" NavigateUrl="~/newReports/lrprofit.aspx">15) BOOKING MARGIN</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="f14"  runat="server" Visible="False" NavigateUrl="~/misReports/bookingcircle.aspx">16) CIRCLEWISE BOOKING</asp:HyperLink></li>
+          <li style="text-align: left"><asp:HyperLink ID="F15"  runat="server" Visible="False" NavigateUrl="~/misReports/rvenueyeild1.aspx">17) REVENUE YEILD</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="DCWTGP"  runat="server" Visible="False" NavigateUrl="~/EntryForms/Mailauto.aspx">18) Auto Mail</asp:HyperLink></li>
+         <li class="sublast"  style="text-align: left"><asp:HyperLink ID="f16"  runat="server" Visible="False" NavigateUrl="~/EntryForms/costing.aspx">19) Costing</asp:HyperLink></li>
+         
+        </ul>
+       </li> 
+       <li class="subfirst" style="text-align: left"> <a href="#">        <span>8. IT CANCEL FORM</span></a> 
+      <ul>
+      <li  style="text-align: left"><asp:HyperLink ID="cngr" Visible="false" runat="server" NavigateUrl="~/EntryForms/cancelgr.aspx">1) GR CANCELLATION</asp:HyperLink></li>
+      <li  style="text-align: left"><asp:HyperLink ID="cnch" Visible="false" runat="server" NavigateUrl="~/EntryForms/cancelchallan.aspx">2) CHALLAN CANCELLATION</asp:HyperLink></li>
+      <li  style="text-align: left"><asp:HyperLink ID="cnbill" Visible="false" runat="server" NavigateUrl="~/EntryForms/cancelbill.aspx">3) BILL CANCELLATION</asp:HyperLink></li>
+      <li  style="text-align: left"><asp:HyperLink ID="cndc" Visible="false" runat="server" NavigateUrl="~/EntryForms/canceldc.aspx">4) DC CANCELLATION</asp:HyperLink></li>
+      </ul>
+       </li> 
+      
+      
+      <%--<li class="subfirst" style="text-align: left"> <a href="#">        <span>8.FOLLOW RPTS</span></a> 
+         <ul>
+         <li style="text-align: left"><asp:HyperLink ID="f11"  runat="server" Visible="False" NavigateUrl="~/misReports/gatepassunbilledtbb.aspx">10)GATEPASS TBB UNBILLED</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="f12"  runat="server" Visible="False" NavigateUrl="~/misReports/gatepassunbilledtbbdest.aspx">11)GATEPASS TBB DESTINATION UNBILLED</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="f13"  runat="server" Visible="False" NavigateUrl="~/misReports/unbilleddestination.aspx">12)UNBILLED WHERE DESTINATION BRANCH NOT EXIST</asp:HyperLink></li>
+         </ul>
+	</li>
+--%>
+         
+  	
+	 <li class="subfirst" style="text-align: left"> <a href="#">        <span>9. IT Special</span></a> 
+         <ul>
+        <li class="subfirst" style="text-align: left"><asp:HyperLink ID="IT221"  runat="server" Visible="False" NavigateUrl="~/reports/tallytrbank.aspx">1) TWL TO TALLY (Ramanujam)</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="IT222"  runat="server" Visible="False" NavigateUrl="~/Reports/tallytrbilln.aspx">2) TWL to Tally (BILL)</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="IT223"  runat="server" Visible="False" NavigateUrl="~/Reports/tallytrbr.aspx">3) Twl to Tally (Receipt)</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="IT224"  runat="server" Visible="False" NavigateUrl="~/Reports/tallytrhas.aspx">4) Twl to Tally (HAS)</asp:HyperLink></li>
+        <li class="sublast"  style="text-align: left"><asp:HyperLink ID="IT225"  runat="server" Visible="False" NavigateUrl="~/Reports/tallytradv.aspx">5) Twl to Tally (Advance)</asp:HyperLink></li>
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="IT226" Visible="false"  runat="server" NavigateUrl="~/reports/tallytr.aspx">6) TWL TO TALLY (SINGLE) </asp:HyperLink></li>
+        </ul>
+	</li>
+	</ul>
+</li>	
+	<li class="topmenu" style="text-align: left"><asp:HyperLink ID="HyperLink64" runat="server" NavigateUrl="~/Entryforms/alterrecord.aspx" >TWL Modification</asp:HyperLink>
+	<ul><li class="subfirst" style="text-align: left"><asp:HyperLink ID="it0"  runat="server" Visible="False" NavigateUrl="~/Entryforms/alterupd.aspx">Modification Pending</asp:HyperLink></li>
+	</ul></li>
+    
+    
+    <li class="topmenu" style="text-align: left"><a href="#">Old Session</a>
+	<ul>
+	<li class="subfirst" style="text-align: left"><a href="#" ><span>2015 - 2016</span></a>
+	<ul>
+	<li class="subfirst" style="text-align: left"> <a href="#"><span>1.Pre Print Rpts</span></a> 
+	<ul>
+	<li class="subfirst" style="text-align: left"><asp:HyperLink ID="HyperLink205" runat="server" NavigateUrl="~/Reports1516/PreprintCLN/PP_GR_Road.aspx">1) CLN Print</asp:HyperLink></li>
+	<li style="text-align: left"><asp:HyperLink ID="HyperLink206" Visible="true" runat="server" NavigateUrl="~/Reports1516/PrePrintChallan/PP_Challan_Road.aspx">2) Manifest/Challan</asp:HyperLink></li>
+    <li style="text-align: left"><asp:HyperLink ID="HyperLink208" Visible="true"  runat="server" NavigateUrl="~/Reports1516/PrePrintChallan/PP_Challan_Road_DH.aspx">3) Manifest/Challan Delhi Hub</asp:HyperLink></li>
+    <li style="text-align: left"> <asp:HyperLink ID="HyperLink209" Visible="true" runat="server" NavigateUrl="~/Reports1516/PrePrintHAS/prelorry.aspx">4) Lorry/HAS</asp:HyperLink></li>
+    <li style="text-align: left"><asp:HyperLink ID="HyperLink210" Visible="true" runat="server" NavigateUrl="~/Reports1516/PrePrintUnloading/prearrival.aspx">5) Arrival/Unloading</asp:HyperLink></li>
+    <li style="text-align: left"> <asp:HyperLink ID="HyperLink211" Visible="true" runat="server" NavigateUrl="~/Reports1516/PreprintDC/predc.aspx">6) Delivery Challan</asp:HyperLink></li>
+    <li style="text-align: left"><asp:HyperLink ID="HyperLink212" Visible="true" runat="server" NavigateUrl="~/Reports1516/PreprintGP/Gatepasspreprint.aspx">7) Gatepass</asp:HyperLink></li>
+             
+	<li  style="text-align: left"><asp:HyperLink ID="HyperLink222" runat="server" NavigateUrl="~/Reports1516/PreprintBill/billpreprint.aspx">8) Bill Print Chennai</asp:HyperLink></li>
+	<li  style="text-align: left"><asp:HyperLink ID="HyperLink223" runat="server" NavigateUrl="~/Reports1516/PreprintBill/billpreprintoth.aspx">9) Bill Print Except Chennai</asp:HyperLink></li>
+	<li  style="text-align: left"><asp:HyperLink ID="HyperLink225" runat="server" NavigateUrl="~/Reports1516/PreprintBill/billprinta4.aspx">10) Bill Print A4</asp:HyperLink></li>
+	<li  style="text-align: left"><asp:HyperLink ID="HyperLink226" runat="server" NavigateUrl="~/Reports1516/PreprintBill/frmcandfpreprint.aspx">11) Logistics Bill Print</asp:HyperLink></li>
+	
+	
+    <li style="text-align: left"> <asp:HyperLink ID="HyperLink227" Visible="true" runat="server" NavigateUrl="~/Reports1516/PreprintBill/prepaidpreprint.aspx">12) Prepaid bill A4 print</asp:HyperLink>  </li>
+    <li style="text-align: left"> <asp:HyperLink ID="HyperLink228" Visible="False" runat="server" NavigateUrl="~/Reports1516/PreprintBill/amaraja.aspx">13) Amara Raja Bill A4 Print</asp:HyperLink></li>
+    <li style="text-align: left"> <asp:HyperLink ID="HyperLink229" Visible="False" runat="server" NavigateUrl="~/Reports1516/PreprintBill/amarajasec.aspx">14) Amara Raja secondary Bill A4 Print</asp:HyperLink></li>
+    <li style="text-align: left"> <asp:HyperLink ID="HyperLink231" Visible="true" runat="server" NavigateUrl="~/Reports1516/PreprintBill/otis.aspx">15) Otis Bill Preprint</asp:HyperLink></li>
+    <li class="sublast" style="text-align: left"> <asp:HyperLink ID="HyperLink232" Visible="true" runat="server" NavigateUrl="~/Reports1516/PreprintBRCR/crReport.aspx">16) Receipt BR/CR Print</asp:HyperLink>  </li>        
+             
+	</ul>
+	</li>
+	
+	
+	<li class="subfirst" style="text-align: left"><a href="#"><span>2.Booking Rpts</span></a> 
+	<ul>
+       <li class="subfirst" style="text-align: left"> <asp:HyperLink ID="HyperLink233" Visible="true" runat="server" NavigateUrl="~/Reports1516/booking/bookingReport.aspx">1) Booking Statistics</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink234" Visible="true" runat="server" NavigateUrl="~/Reports1516/booking/BookingSumFrt.aspx">2) Booking Summary</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink235" Visible="true" runat="server" NavigateUrl="~/Reports1516/booking/frmpaymentwise.aspx">3) Monthly Booking</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink236" Visible="true" runat="server" NavigateUrl="~/Reports1516/booking/frmprepaid.aspx">4) Prepaid</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink237" Visible="true" runat="server" NavigateUrl="~/Reports1516/booking/frmtopaysum.aspx">5) To Pay</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink238" Visible="true" runat="server" NavigateUrl="~/Reports1516/booking/frmtobebilled.aspx">6) To Be Billed</asp:HyperLink>  </li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink239" Visible="true" runat="server" NavigateUrl="~/Reports1516/booking/frmgbdr.aspx">7) GBDR</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink240" Visible="true" runat="server" NavigateUrl="~/Reports1516/booking/frmdatewisegbdr.aspx">8) DatewiseGBDR </asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink241" Visible="true" runat="server" NavigateUrl="~/Reports1516/booking/frmpartiwisebkg.aspx">9) PartyWise Booking Register</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink242" Visible="true" runat="server" NavigateUrl="~/Reports1516/booking/frmcuswiseRTJA.aspx">10) Customerwise Booking Summary</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink243" Visible="true" runat="server" NavigateUrl="~/Reports1516/booking/frmtopaystatement.aspx">11) To Pay Statement</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink244" Visible="true" runat="server" NavigateUrl="~/Reports1516/booking/bookingReportList.aspx">12) BookingDespatch</asp:HyperLink>        </li>         
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink245" Visible="true" runat="server" NavigateUrl="~/Reports1516/booking/wabco.aspx">13) Booking Details Wabco</asp:HyperLink>        </li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink246" Visible="true" runat="server" NavigateUrl="~/Reports1516/booking/frmtbbdetstatement.aspx">14) TBB Destination Statement</asp:HyperLink></li>         
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink247" Visible="true" runat="server" NavigateUrl="~/Reports1516/booking/bookingdespatchroad.aspx">15) Despatch Report with vehicle No</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink248" Visible="true" runat="server"  NavigateUrl="~/Reports1516/booking/profitabiltygr.aspx">16) Profitability</asp:HyperLink></li> 
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="HyperLink249" Visible="true" runat="server"  NavigateUrl="~/Reports1516/booking/grbdar.aspx?Value=BKGBDAR">17) Booking Despatch & arrival</asp:HyperLink></li> 
+      
+      </ul>
+      </li> 
+      <li class="subfirst" style="text-align: left"><a href="#"><span>3.Despatch Rpts</span></a> 
+      <ul>
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink250" Visible="true" runat="server" NavigateUrl="~/Reports1516/Despatch/LorryHireReport1.aspx">1)Lorry Hire Report</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink251" Visible="true" runat="server" NavigateUrl="~/Reports1516/Despatch/Coolieloaded.aspx">2)Incidental Charges (Truck Outgoing Loadwise)</asp:HyperLink> </li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink252" Visible="true" runat="server" NavigateUrl="~/Reports1516/Despatch/incidentalCharges.aspx">3)Incidental Charges (Truck Incoming)</asp:HyperLink></li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink253" Visible="true" runat="server" NavigateUrl="~/Reports1516/Despatch/lorrypaymentreport.aspx">4)Lorry Payment Report</asp:HyperLink></li> 
+       </ul>
+     </li> 
+
+      
+          
+      
+       <li class="subfirst" style="text-align: left"> <a href="#"> <span>4.Unloading Rpts</span></a> 
+      <ul>
+         <li class="sublast" style="text-align: left"><asp:HyperLink ID="HyperLink254" Visible="true" runat="server" NavigateUrl="~/Reports1516/Arrival/express.aspx">1) Additional Charges Reports</asp:HyperLink></li>
+         
+        </ul> 
+      </li> 
+      
+      <li class="subfirst" style="text-align: left"> <a href="#"><span>5.Delivery Rpts</span></a> 
+            <ul>        
+         
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink255" Visible="true" runat="server" NavigateUrl="~/Reports1516/Delivery/frmdcrpt.aspx">1)DC Report</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink256" Visible="true" runat="server" NavigateUrl="~/Reports1516/Delivery/frmunloadchgs.aspx">2)Local Delivery Charges Rpt</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink257" Visible="true" runat="server" NavigateUrl="~/Reports1516/Delivery/frmllhinc.aspx">3)Incidental Charge Report</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink258" Visible="true" runat="server" NavigateUrl="~/Reports1516/Delivery/frmredelrpt.aspx">4)Redelivery Report</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink259" Visible="true" runat="server" NavigateUrl="~/Reports1516/Delivery/GatePassReport.aspx">5)DSD</asp:HyperLink></li> 
+         <li class="sublast" style="text-align: left"><asp:HyperLink ID="HyperLink267" Visible="true" runat="server" NavigateUrl="~/Reports1516/Delivery/frmdlyrpt.aspx">6)Customerwise Delivery Report</asp:HyperLink></li> 
+            </ul> 
+      </li>
+         
+      
+       <li class="subfirst" style="text-align: left"><a href="#"><span>6.Billing Rpts</span></a> 
+      <ul>
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink260" Visible="true" runat="server" NavigateUrl="~/Reports1516/billing/billingReportWeb.aspx">1) Customer Wise</asp:HyperLink>  </li>
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink261" Visible="true" runat="server" NavigateUrl="~/Reports1516/billing/billWiseReport.aspx">2) Bill Wise Report</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink262" Visible="true"  runat="server" NavigateUrl="~/Reports1516/Billing/billSubmit.aspx">3)Bill Not Submitted</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink263" Visible="true"  runat="server" NavigateUrl="~/Reports1516/Billing/courier_detail.aspx">4)Courier Detail</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink264" Visible="true"  runat="server" NavigateUrl="~/Reports1516/Billing/frmcover.aspx">5)Bill Covering Letter</asp:HyperLink></li>
+         <li class="sublast" style="text-align: left"><asp:HyperLink ID="HyperLink265"  runat="server" Visible="true" NavigateUrl="~/Reports1516/Billing/billstaxpro.aspx">6)Billing Detail For Service Tax</asp:HyperLink></li>
+        </ul>
+      </li> 
+      
+       <li class="subfirst" style="text-align: left"><a href="#"><span>7.Collection Rpts</span></a> 
+      <ul>
+      <li class="subfirst" style="text-align: left">  <asp:HyperLink ID="HyperLink268" Visible="true" runat="server" NavigateUrl="~/Reports1516/Collection/frmpaycdedsum.aspx">1) Collection</asp:HyperLink></li> 
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink275" Visible="true" runat="server" NavigateUrl="~/Reports1516/Collection/DCRREPORT.aspx">2) Daily Collection Report</asp:HyperLink></li> 
+      <li class="sublast" style="text-align: left"><asp:HyperLink ID="HyperLink266" Visible="true" runat="server" NavigateUrl="~/Reports1516/Collection/frmadhadj.aspx">3)ADHOC With Adjustments</asp:HyperLink></li> 
+      </ul>
+      </li> 
+      
+    <li class="subfirst" style="text-align: left"><a href="#"><span>8.Fund Rpts</span></a> 
+	<ul>
+      <li style="text-align: left"><asp:HyperLink ID="FND1516" Visible="true" runat="server" NavigateUrl="~/Reports1516/FundReport/funddetailreport.aspx">Fund Report</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="fnd11516" Visible="true" runat="server" NavigateUrl="~/Reports1516/FundReport/fundpayment.aspx">Fund Payment Report</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="FAND21516" Visible="true" runat="server" NavigateUrl="~/Reports1516/FundReport/approvalincidental.aspx">Incidental Approval Report</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="FND31516" Visible="true" runat="server" NavigateUrl="~/Reports1516/FundReport/chequeprintno.aspx">Cheque Print</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="FND41516" Visible="true" runat="server" NavigateUrl="~/Reports1516/FundReport/chequedetail.aspx">Fund Issued</asp:HyperLink></li> 
+        
+         </ul>
+      </li>
+	
+	 <li class="subfirst" style="text-align: left"> <a href="#"><span>9.All Reports</span></a>     
+       <ul >
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="ALLRPT1516" Visible="true" runat="server"  NavigateUrl="~/Reports1516/AllInOne/allrptn.aspx">1) All In One Reports</asp:HyperLink></li> 
+      </ul>
+      </li>
+      
+	
+	</ul> 
+	</li>
+	
+	<li class="subfirst" style="text-align: left"><a href="#" ><span>2014 - 2015</span></a>
+	<ul>
+	<li class="subfirst" style="text-align: left"> <a href="#"><span>1.Pre Print Rpts</span></a> 
+	<ul>
+	<li class="subfirst" style="text-align: left"><asp:HyperLink ID="HyperLink118" runat="server" NavigateUrl="~/Reports1415/PreprintCLN/PP_GR_Road.aspx">1) CLN Print</asp:HyperLink></li>
+	<li style="text-align: left"><asp:HyperLink ID="HyperLink120" Visible="true" runat="server" NavigateUrl="~/Reports1415/PrePrintChallan/PP_Challan_Road.aspx">2) Manifest/Challan</asp:HyperLink></li>
+    <li style="text-align: left"><asp:HyperLink ID="HyperLink130" Visible="true"  runat="server" NavigateUrl="~/Reports1415/PrePrintChallan/PP_Challan_Road_DH.aspx">3) Manifest/Challan Delhi Hub</asp:HyperLink></li>
+    <li style="text-align: left"> <asp:HyperLink ID="HyperLink132" Visible="true" runat="server" NavigateUrl="~/Reports1415/PrePrintHAS/prelorry.aspx">4) Lorry/HAS</asp:HyperLink></li>
+    <li style="text-align: left"><asp:HyperLink ID="HyperLink133" Visible="true" runat="server" NavigateUrl="~/Reports1415/PrePrintUnloading/prearrival.aspx">5) Arrival/Unloading</asp:HyperLink></li>
+    <li style="text-align: left"> <asp:HyperLink ID="HyperLink140" Visible="true" runat="server" NavigateUrl="~/Reports1415/PreprintDC/predc.aspx">6) Delivery Challan</asp:HyperLink></li>
+    <li style="text-align: left"><asp:HyperLink ID="HyperLink137" Visible="true" runat="server" NavigateUrl="~/Reports1415/PreprintGP/Gatepasspreprint.aspx">7) Gatepass</asp:HyperLink></li>
+             
+	<li  style="text-align: left"><asp:HyperLink ID="HyperLink103" runat="server" NavigateUrl="~/Reports1415/PreprintBill/billpreprint.aspx">8) Bill Print Chennai</asp:HyperLink></li>
+	<li  style="text-align: left"><asp:HyperLink ID="HyperLink108" runat="server" NavigateUrl="~/Reports1415/PreprintBill/billpreprintoth.aspx">9) Bill Print Except Chennai</asp:HyperLink></li>
+	<li  style="text-align: left"><asp:HyperLink ID="HyperLink114" runat="server" NavigateUrl="~/Reports1415/PreprintBill/billprinta4.aspx">10) Bill Print A4</asp:HyperLink></li>
+	<li  style="text-align: left"><asp:HyperLink ID="HyperLink141" runat="server" NavigateUrl="~/Reports1415/PreprintBill/frmcandfpreprint.aspx">11) Logistics Bill Print</asp:HyperLink></li>
+	
+	
+    <li style="text-align: left"> <asp:HyperLink ID="HyperLink143" Visible="true" runat="server" NavigateUrl="~/Reports1415/PreprintBill/prepaidpreprint.aspx">12) Prepaid bill A4 print</asp:HyperLink>  </li>
+    <li style="text-align: left"> <asp:HyperLink ID="HyperLink147" Visible="False" runat="server" NavigateUrl="~/Reports1415/PreprintBill/amaraja.aspx">13) Amara Raja Bill A4 Print</asp:HyperLink></li>
+    <li style="text-align: left"> <asp:HyperLink ID="HyperLink154" Visible="False" runat="server" NavigateUrl="~/Reports1415/PreprintBill/amarajasec.aspx">14) Amara Raja secondary Bill A4 Print</asp:HyperLink></li>
+    <li style="text-align: left"> <asp:HyperLink ID="HyperLink155" Visible="true" runat="server" NavigateUrl="~/Reports1415/PreprintBill/otis.aspx">15) Otis Bill Preprint</asp:HyperLink></li>
+    <li class="sublast" style="text-align: left"> <asp:HyperLink ID="HyperLink142" Visible="true" runat="server" NavigateUrl="~/Reports1415/PreprintBRCR/crReport.aspx">16) Receipt BR/CR Print</asp:HyperLink>  </li>        
+             
+	</ul>
+	</li>
+	
+	
+	<li class="subfirst" style="text-align: left"><a href="#"><span>2.Booking Rpts</span></a> 
+	<ul>
+       <li class="subfirst" style="text-align: left"> <asp:HyperLink ID="HyperLink156" Visible="true" runat="server" NavigateUrl="~/Reports1415/booking/bookingReport.aspx">1) Booking Statistics</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink157" Visible="true" runat="server" NavigateUrl="~/Reports1415/booking/BookingSumFrt.aspx">2) Booking Summary</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink158" Visible="true" runat="server" NavigateUrl="~/Reports1415/booking/frmpaymentwise.aspx">3) Monthly Booking</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink159" Visible="true" runat="server" NavigateUrl="~/Reports1415/booking/frmprepaid.aspx">4) Prepaid</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink160" Visible="true" runat="server" NavigateUrl="~/Reports1415/booking/frmtopaysum.aspx">5) To Pay</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink161" Visible="true" runat="server" NavigateUrl="~/Reports1415/booking/frmtobebilled.aspx">6) To Be Billed</asp:HyperLink>  </li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink162" Visible="true" runat="server" NavigateUrl="~/Reports1415/booking/frmgbdr.aspx">7) GBDR</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink163" Visible="true" runat="server" NavigateUrl="~/Reports1415/booking/frmdatewisegbdr.aspx">8) DatewiseGBDR </asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink164" Visible="true" runat="server" NavigateUrl="~/Reports1415/booking/frmpartiwisebkg.aspx">9) PartyWise Booking Register</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink165" Visible="true" runat="server" NavigateUrl="~/Reports1415/booking/frmcuswiseRTJA.aspx">10) Customerwise Booking Summary</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink166" Visible="true" runat="server" NavigateUrl="~/Reports1415/booking/frmtopaystatement.aspx">11) To Pay Statement</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink167" Visible="true" runat="server" NavigateUrl="~/Reports1415/booking/bookingReportList.aspx">12) BookingDespatch</asp:HyperLink>        </li>         
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink169" Visible="true" runat="server" NavigateUrl="~/Reports1415/booking/wabco.aspx">13) Booking Details Wabco</asp:HyperLink>        </li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink170" Visible="true" runat="server" NavigateUrl="~/Reports1415/booking/frmtbbdetstatement.aspx">14) TBB Destination Statement</asp:HyperLink></li>         
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink172" Visible="true" runat="server" NavigateUrl="~/Reports1415/booking/bookingdespatchroad.aspx">15) Despatch Report with vehicle No</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink173" Visible="true" runat="server"  NavigateUrl="~/Reports1415/booking/profitabiltygr.aspx">16) Profitability</asp:HyperLink></li> 
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="HyperLink174" Visible="true" runat="server"  NavigateUrl="~/Reports1415/booking/grbdar.aspx?Value=BKGBDAR">17) Booking Despatch & arrival</asp:HyperLink></li> 
+      
+      </ul>
+      </li> 
+      <li class="subfirst" style="text-align: left"><a href="#"><span>3.Despatch Rpts</span></a> 
+      <ul>
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink179" Visible="true" runat="server" NavigateUrl="~/Reports1415/Despatch/LorryHireReport1.aspx">1)Lorry Hire Report</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink181" Visible="true" runat="server" NavigateUrl="~/Reports1415/Despatch/Coolieloaded.aspx">2)Incidental Charges (Truck Outgoing Loadwise)</asp:HyperLink> </li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink182" Visible="true" runat="server" NavigateUrl="~/Reports1415/Despatch/incidentalCharges.aspx">3)Incidental Charges (Truck Incoming)</asp:HyperLink></li> 
+       <li style="text-align: left"><asp:HyperLink ID="HyperLink193" Visible="true" runat="server" NavigateUrl="~/Reports1415/Despatch/lorrypaymentreport.aspx">4)Lorry Payment Report</asp:HyperLink></li> 
+       </ul>
+     </li> 
+
+      
+          
+      
+       <li class="subfirst" style="text-align: left"> <a href="#"> <span>4.Unloading Rpts</span></a> 
+      <ul>
+         <li class="sublast" style="text-align: left"><asp:HyperLink ID="HyperLink188" Visible="true" runat="server" NavigateUrl="~/Reports1415/Arrival/express.aspx">1) Additional Charges Reports</asp:HyperLink></li>
+         
+        </ul> 
+      </li> 
+      
+      <li class="subfirst" style="text-align: left"> <a href="#"><span>5.Delivery Rpts</span></a> 
+            <ul>        
+         
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink191" Visible="true" runat="server" NavigateUrl="~/Reports1415/Delivery/frmdcrpt.aspx">1)DC Report</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink192" Visible="true" runat="server" NavigateUrl="~/Reports1415/Delivery/frmunloadchgs.aspx">2)Local Delivery Charges Rpt</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink194" Visible="true" runat="server" NavigateUrl="~/Reports1415/Delivery/frmllhinc.aspx">3)Incidental Charge Report</asp:HyperLink></li> 
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink197" Visible="true" runat="server" NavigateUrl="~/Reports1415/Delivery/frmredelrpt.aspx">4)Redelivery Report</asp:HyperLink></li> 
+         <li class="subfirst" style="text-align: left"><asp:HyperLink ID="HyperLink183" Visible="true" runat="server" NavigateUrl="~/Reports1415/Delivery/GatePassReport.aspx">5)DSD</asp:HyperLink></li> 
+            </ul> 
+      </li>
+         
+      
+       <li class="subfirst" style="text-align: left"><a href="#"><span>6.Billing Rpts</span></a> 
+      <ul>
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink187" Visible="true" runat="server" NavigateUrl="~/Reports1415/billing/billingReportWeb.aspx">1) Customer Wise</asp:HyperLink>  </li>
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink190" Visible="true" runat="server" NavigateUrl="~/Reports1415/billing/billWiseReport.aspx">2) Bill Wise Report</asp:HyperLink></li>
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink185" Visible="true"  runat="server" NavigateUrl="~/Reports1415/Billing/billSubmit.aspx">3)Bill Not Submitted</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink186" Visible="true"  runat="server" NavigateUrl="~/Reports1415/Billing/courier_detail.aspx">4)Courier Detail</asp:HyperLink></li>
+         <li style="text-align: left"><asp:HyperLink ID="HyperLink195" Visible="true"  runat="server" NavigateUrl="~/Reports1415/Billing/frmcover.aspx">5)Bill Covering Letter</asp:HyperLink></li>
+         <li class="sublast" style="text-align: left"><asp:HyperLink ID="HyperLink176"  runat="server" Visible="true" NavigateUrl="~/Reports1415/Billing/billstaxpro.aspx">6)Billing Detail For Service Tax</asp:HyperLink></li>
+        </ul>
+      </li> 
+      
+       <li class="subfirst" style="text-align: left"><a href="#"><span>7.Collection Rpts</span></a> 
+      <ul>
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink178" Visible="true" runat="server" NavigateUrl="~/Reports1415/Collection/frmadhadj.aspx">1)ADHOC With Adjustments</asp:HyperLink></li> 
+      </ul>
+      </li> 
+      
+    <li class="subfirst" style="text-align: left"><a href="#"><span>8.Fund Rpts</span></a> 
+	<ul>
+      <li style="text-align: left"><asp:HyperLink ID="HyperLink168" Visible="true" runat="server" NavigateUrl="~/Reports1415/FundReport/funddetailreport.aspx">Fund Report</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink171" Visible="true" runat="server" NavigateUrl="~/Reports1415/FundReport/fundpayment.aspx">Fund Payment Report</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink175" Visible="true" runat="server" NavigateUrl="~/Reports1415/FundReport/approvalincidental.aspx">Incidental Approval Report</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink180" Visible="true" runat="server" NavigateUrl="~/Reports1415/FundReport/chequeprintno.aspx">Cheque Print</asp:HyperLink></li> 
+        <li style="text-align: left"><asp:HyperLink ID="HyperLink184" Visible="true" runat="server" NavigateUrl="~/Reports1415/FundReport/chequedetail.aspx">Fund Issued</asp:HyperLink></li> 
+        
+         </ul>
+      </li>
+	
+	 <li class="subfirst" style="text-align: left"> <a href="#"><span>9.All Reports</span></a>     
+       <ul >
+        <li class="sublast" style="text-align: left"><asp:HyperLink ID="HyperLink177" Visible="true" runat="server"  NavigateUrl="~/Reports1415/AllInOne/allrptn.aspx">1) All In One Reports</asp:HyperLink></li> 
+      </ul>
+      </li>
+      
+	
+	</ul> 
+	</li> 
+	
+	
+	<li class="subfirst" style="text-align: left"><a href="#" ><span>2013 - 2014</span></a>
+	<ul>
+	<li class="subfirst" style="text-align: left"> <a href="#"><span>1.Pre Print Rpts</span></a> 
+	<ul>
+	<li class="subfirst" style="text-align: left"><asp:HyperLink ID="HyperLink189" runat="server" NavigateUrl="~/Reports1314/PreprintBill/billprinta4.aspx">1) Bill Print A4</asp:HyperLink></li>
+	</ul>
+	</li>
+	
+	</ul>
+	</li> 
+	
+	<li class="subfirst" style="text-align: left"><a href="#" ><span>2012 - 2013</span></a>
+	<ul>
+	
+	<li class="subfirst" style="text-align: left"> <a href="#"><span>1.Pre Print Rpts</span></a> 
+	<ul>
+	<li class="subfirst" style="text-align: left"><asp:HyperLink ID="HyperLink214" runat="server" NavigateUrl="~/Reports1213/PreprintCLN/PP_GR_Road.aspx">1) CLN Print</asp:HyperLink></li>
+	<li style="text-align: left"><asp:HyperLink ID="HyperLink215" Visible="true" runat="server" NavigateUrl="~/Reports1213/PrePrintChallan/PP_Challan_Road.aspx">2) Manifest/Challan</asp:HyperLink></li>
+    <li style="text-align: left"><asp:HyperLink ID="HyperLink216" Visible="true"  runat="server" NavigateUrl="~/Reports1213/PrePrintChallan/PP_Challan_Road_DH.aspx">3) Manifest/Challan Delhi Hub</asp:HyperLink></li>
+    <li style="text-align: left"> <asp:HyperLink ID="HyperLink217" Visible="true" runat="server" NavigateUrl="~/Reports1213/PrePrintHAS/prelorry.aspx">4) Lorry/HAS</asp:HyperLink></li>
+    <li style="text-align: left"><asp:HyperLink ID="HyperLink218" Visible="true" runat="server" NavigateUrl="~/Reports1213/PrePrintUnloading/prearrival.aspx">5) Arrival/Unloading</asp:HyperLink></li>
+    <li style="text-align: left"> <asp:HyperLink ID="HyperLink219" Visible="true" runat="server" NavigateUrl="~/Reports1213/PreprintDC/predc.aspx">6) Delivery Challan</asp:HyperLink></li>
+    <li style="text-align: left"><asp:HyperLink ID="HyperLink221" Visible="true" runat="server" NavigateUrl="~/Reports1213/PreprintGP/Gatepasspreprint.aspx">7) Gatepass</asp:HyperLink></li>             
+	<li  style="text-align: left"><asp:HyperLink ID="HyperLink224" runat="server" NavigateUrl="~/Reports1213/PreprintBill/billprinta4.aspx">8) Bill Print A4</asp:HyperLink></li>	
+    <li class="sublast" style="text-align: left"> <asp:HyperLink ID="HyperLink230" Visible="true" runat="server" NavigateUrl="~/Reports1213/PreprintBRCR/crReport.aspx">9) Receipt BR/CR Print</asp:HyperLink>  </li>        
+	
+	</ul>
+	</li> 
+	</ul>
+	</li> 
+	
+	
+	<li class="subfirst" style="text-align: left"><a href="#" ><span>2011 - 2012</span></a>
+	<ul>
+	
+	<li class="subfirst" style="text-align: left"> <a href="#"><span>1.Pre Print Rpts</span></a> 
+	<ul>
+	<li class="subfirst" style="text-align: left"><asp:HyperLink ID="HyperLink198" runat="server" NavigateUrl="~/Reports1112/PreprintCLN/PP_GR_Road.aspx">1) CLN Print</asp:HyperLink></li>
+	<li style="text-align: left"><asp:HyperLink ID="HyperLink199" Visible="true" runat="server" NavigateUrl="~/Reports1112/PrePrintChallan/PP_Challan_Road.aspx">2) Manifest/Challan</asp:HyperLink></li>
+    <li style="text-align: left"><asp:HyperLink ID="HyperLink200" Visible="true"  runat="server" NavigateUrl="~/Reports1112/PrePrintChallan/PP_Challan_Road_DH.aspx">3) Manifest/Challan Delhi Hub</asp:HyperLink></li>
+    <li style="text-align: left"> <asp:HyperLink ID="HyperLink201" Visible="true" runat="server" NavigateUrl="~/Reports1112/PrePrintHAS/prelorry.aspx">4) Lorry/HAS</asp:HyperLink></li>
+    <li style="text-align: left"><asp:HyperLink ID="HyperLink202" Visible="true" runat="server" NavigateUrl="~/Reports1112/PrePrintUnloading/prearrival.aspx">5) Arrival/Unloading</asp:HyperLink></li>
+    <li style="text-align: left"> <asp:HyperLink ID="HyperLink203" Visible="true" runat="server" NavigateUrl="~/Reports1112/PreprintDC/predc.aspx">6) Delivery Challan</asp:HyperLink></li>
+    <li style="text-align: left"><asp:HyperLink ID="HyperLink204" Visible="true" runat="server" NavigateUrl="~/Reports1112/PreprintGP/Gatepasspreprint.aspx">7) Gatepass</asp:HyperLink></li>
+	<li  style="text-align: left"><asp:HyperLink ID="HyperLink207" runat="server" NavigateUrl="~/Reports1112/PreprintBill/billprinta4.aspx">8) Bill Print A4</asp:HyperLink></li>
+    <li class="sublast" style="text-align: left"> <asp:HyperLink ID="HyperLink213" Visible="true" runat="server" NavigateUrl="~/Reports1112/PreprintBRCR/crReport.aspx">9) Receipt BR/CR Print</asp:HyperLink>  </li>        
+             
+	</ul>
+	</li>
+	
+	</ul>
+	</li>
+	
+	<li class="subfirst" style="text-align: left"><a href="#" ><span>2010 - 2011</span></a>
+	<ul>
+	</ul>
+	</li>
+	
+	<li class="subfirst" style="text-align: left"><a href="#" ><span>2009 - 2010</span></a>
+	<ul>
+	</ul>
+	</li>
+	
+	</ul> 
+	</li>
+	
+	
+	
+    <li class="topmenu" style="text-align: left"><asp:HyperLink ID="HyperLink129" target="_blank" runat="server" NavigateUrl="~/mis_south_track_it/misreports_track.asp">Tracking</asp:HyperLink></li> 
+    <li class="topmenu" style="text-align: left"><a href="#">Admin - HR</a>
+	<ul>
+	<li class="subfirst" style="text-align: left"><asp:HyperLink ID="HyperLink31" runat="server" NavigateUrl="~/Entryforms/attendance.aspx">Attendance</asp:HyperLink></li>
+	<li style="text-align: left"><asp:HyperLink ID="HyperLink91" runat="server" NavigateUrl="~/Entryforms/attendleave.aspx">Leave</asp:HyperLink></li>
+	<li style="text-align: left"><asp:HyperLink ID="LVAPPRV" Visible ="false"   runat="server" NavigateUrl="~/Entryforms/attendLeaveApprove.aspx">Approve Leave</asp:HyperLink></li>
+	<li style="text-align: left"><asp:HyperLink ID="HyperLink89" runat="server" NavigateUrl="~/addEmployee.aspx">Add Employee</asp:HyperLink></li>
+	<li class="sublast" style="text-align: left"><asp:HyperLink ID="HyperLink88"  runat="server" NavigateUrl="~/misReports/contactgrid.aspx">Branch Contacts</asp:HyperLink></li>
+	</ul>
+	</li>
+	<li class="topmenu" style="text-align: left"><asp:HyperLink ID="HyperLink63" runat="server"  NavigateUrl="~/misReports/pendingbranch.aspx">Dash Board</asp:HyperLink></li>
+	
+	 
+	<li class="topmenu" style="text-align: left"><a href="#" ><span>User's Log</span></a> 
+	<ul>
+		<li class="subfirst" style="text-align: left"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Entryforms/passwordupd.aspx">Reset Password</asp:HyperLink></li>
+		<li class="sublast" style="text-align: left"><asp:LinkButton ID="LogOutMenu" runat="server" >Log Out</asp:LinkButton></li> 
+		</ul>
+		</li>
+		
+</ul> 
+</ContentTemplate> 
+                    </asp:UpdatePanel> 
+         
+         </div>
+             <br />        
+             
+         <asp:ContentPlaceHolder ID="FormContent" runat="server">
+        </asp:ContentPlaceHolder>
+               
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" style="width: 9px; height: 2px" valign="top">
+                </td>
+                <td colspan="2" valign="top" style="height: 2px">
+                <div id="master_headerbottom"></div>
+                </td>
+                <td colspan="1" style="height: 2px; width: 1px;" valign="top">
+                </td>
+            </tr>
+            
+            </table> 
+    </form>
+</body>
+</html>
+
+
+
+
+    
+        
+               
+       
+       
+ 

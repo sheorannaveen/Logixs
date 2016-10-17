@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode >
+    <siteMapNode url="~/Home.aspx" title="Home"  description="Home"/>
+
+    <siteMapNode url="" title="BOOKING"  description="Booking Form">
+      <siteMapNode url="~/EntryForms/Booking.aspx" title=" Save" description="Bookings"/>
+      <siteMapNode url="~/EntryForms/Booking_Upd.aspx" title="Update" description="Bookings"></siteMapNode>
+      <siteMapNode url="~/EntryForms/Booking_Del.aspx" title="Delete" description="Bookings" ></siteMapNode>
+    </siteMapNode >
+
+    <siteMapNode url="" title="CHALLAN"  description="Challan Form">
+      <siteMapNode url="~/EntryForms/NewChallan.aspx" title="Save"  description="Challan" />
+      <siteMapNode url="~/EntryForms/NewChallan_Upd.aspx" title="Update" description="Challan"></siteMapNode>
+      <siteMapNode url="~/EntryForms/NewChallan_Del.aspx" title="Delete" description="Challan"></siteMapNode>
+    </siteMapNode>
+
+    <siteMapNode url="" title="LORRY"  description="Lorry Form">
+      <siteMapNode title="Lorry"  description="Lorry">
+        <siteMapNode url="~/EntryForms/TLorry.aspx" title="Save" description="Lorry"></siteMapNode>
+        <siteMapNode url="~/EntryForms/TLorry_Upd.aspx" title="Update" description="Lorry"></siteMapNode>
+        <siteMapNode url="~/EntryForms/TLorry_Del.aspx" title="Delete" description="Lorry"></siteMapNode>
+      </siteMapNode>
+    
+    
+      <siteMapNode title="Local Lorry"  description="Local Lorry">
+          <siteMapNode url="~/EntryForms/TLorryLoc.aspx" title="Save" description="Local Lorry"></siteMapNode>
+        <siteMapNode url="~/EntryForms/TLorryLoc_Upd.aspx" title="Update" description="Local Lorry"></siteMapNode>
+        <siteMapNode url="~/EntryForms/TLorryLoc_Del.aspx" title="Delete" description="Local Lorry"></siteMapNode>
+        </siteMapNode>
+      </siteMapNode >
+        
+
+      
+
+
+      <siteMapNode url="" title="UNLOADING"  description="Unloading Form">
+       
+          <siteMapNode url="~/EntryForms/NewUnloading.aspx" title="Save" description="Unloading"></siteMapNode>
+          <siteMapNode url="~/EntryForms/Unloading_Upd.aspx" title="Update" description="Unloading Update"></siteMapNode>
+          <siteMapNode url="~/EntryForms/Unloading_Del.aspx" title="Delete" description="Unloading Delete"></siteMapNode>
+        
+      </siteMapNode>
+
+      <siteMapNode url="" title="GATEPASS"  description="GatePass Form">
+        <siteMapNode url="~/EntryForms/GatePass.aspx" title="Save" description="GatePass"/>
+        <siteMapNode url="~/EntryForms/GatePass_Upd.aspx" title="Update" description="GatePass Update"></siteMapNode>
+        <siteMapNode url="~/EntryForms/GatePass_Del.aspx" title="Delete" description="GatePass Delete"></siteMapNode>
+      </siteMapNode>
+
+      <siteMapNode url="" title="CONSIGNOR"  description="Consignor Form">
+        <siteMapNode url="~/EntryForms/Consignor.aspx" title="Save" description="Consignor Save"/>
+        <siteMapNode url="~/EntryForms/Consignor_Upd.aspx" title="Update" description="Consignor Update"></siteMapNode>
+        <siteMapNode url="~/EntryForms/Consignor_Del.aspx" title="Delete" description="Consignor Delete"></siteMapNode>
+      </siteMapNode>
+
+      <siteMapNode url="" title="CONSIGNEE"  description="Consignee Form">
+        <siteMapNode url="~/EntryForms/Consignee.aspx" title="Save" description="Consignee Save"/>
+        <siteMapNode url="~/EntryForms/Consignee_Upd.aspx" title="Update" description="Cosignee Update"></siteMapNode>
+        <siteMapNode url="~/EntryForms/Consignee_Del.aspx" title="Delete" description="Consignee Delete"></siteMapNode>
+      </siteMapNode>
+
+    </siteMapNode>
+  
+    <!--<siteMapNode url="~/Reports/Default.aspx" title="Reports" description="ReportDefault"></siteMapNode>
+      <siteMapNode url="~/Warehouse/Default.aspx" title="Warehouse" description="WarehousseDefault"></siteMapNode>-->
+  
+  </siteMap>
+

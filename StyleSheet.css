@@ -1,0 +1,582 @@
+﻿body, div, p, h1, h2, h3, h4, ul, li, table
+{
+	margin:0;
+	padding:0;
+	border:none;
+}
+	 
+body
+{
+	margin:0;
+	padding:0;
+	border:none;
+	background: Gray url(images/page_bg.gif) ;	
+	font-family: Tahoma, Arial, sans-serif;
+	font-size:75%;
+}
+
+/* Master Page Layout */
+#master_header
+{
+	margin: -1px auto 0 auto;
+	/*width: auto;/*700px;*/
+}
+
+#master_headertop
+{
+	/*background: url(images/headertop_img.jpg) no-repeat left top;*/
+	background: url(images/page_bg.gif) no-repeat left top;
+}
+
+#master_headerbottom
+{
+	/*background: url(images/headerbottom_img.png) no-repeat left top;*/
+	background: url(images/page_bg.gif) no-repeat left top;
+}
+
+#master_page
+{
+	margin: 10px auto 10px auto;
+	/*width: auto;/*700px;*/
+}
+
+#master_menu 
+{
+	float: left;
+	width: auto;/*240px;*/
+	padding-right: 10px;
+	
+	
+}
+
+.sidebar 
+{
+	/*width: auto;/*100%;*/
+	margin-bottom: 10px;
+	margin-left:-15px;
+}
+
+.sidebarheader
+{
+	height: 12px;
+	padding: 10px 0 0 35px;
+	/*background: url(Images/MenuBar.png) no-repeat left top;*/
+	background: url(images/page_bg.gif) no-repeat left top;
+	/*color: #FFF;*/
+	font-family: Arial, Sans-Serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	width:90px;
+	
+	/*width:55%;*/
+}
+
+.sidebarcontent
+{	
+	border: 1px solid #0F2543;
+	padding: 20px 20px 20px 30px;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+
+#master_sidebarSamples
+{	
+	padding-top: 12px;
+	/*background: #FFF url(images/samples_bg.gif) no-repeat left top;*/
+	background: url(images/page_bg.gif) no-repeat left top;
+	width:15%;
+	color:Maroon;
+	
+}
+
+#master_sidebarWalkthroughs
+{
+	padding-top: 12px;
+	/*background: #FFF url(images/walkthrough_bg.gif) no-repeat left top;*/
+	background: url(images/page_bg.gif) no-repeat left top;
+	width:15%;
+	color:Maroon;
+}
+
+.sidebarcontent a
+{
+	padding: 2px 5px;
+	text-decoration: none;
+	color:Green;
+	
+}
+
+.sidebarcontent a:hover
+{
+	text-transform: uppercase;
+	font-weight:bold;
+	color:blue;
+	background-color:yellow;		
+}
+
+.sidebarcontent a:active
+ {
+	/*background-color:Black;*/
+	
+	text-decoration:none;
+	color:Aqua;
+}
+
+#master_content
+{
+	float: left;
+	/*width: auto;/*700px;*/
+		margin-right:-750px;
+	color: #FFFFFF;
+}
+#MyMasterPage_Panel1
+{
+/*    scrollbar-3dlight-color:#ffd700; 
+scrollbar-arrow-color:#ff0; 
+scrollbar-base-color:#ff6347; 
+scrollbar-darkshadow-color:#ffa500; 
+scrollbar-face-color:#008080; 
+scrollbar-highlight-color:#ff69b4; 
+scrollbar-shadow-color:#f0f; */
+
+ /* scrollbar-3dlight-color:#ffd700; 
+scrollbar-arrow-color:#ff0; */
+scrollbar-darkshadow-color:#CCFF99;
+scrollbar-base-color:#CCFF99;
+
+scrollbar-face-color:#CCFF99; 
+scrollbar-highlight-color:#CCFF99; 
+/*scrollbar-shadow-color:#f0f; */
+}
+/*
+#master_content a
+{
+	color: #5377A9;
+	padding: 1px;
+}
+
+#master_content a:link
+{
+}
+
+#master_content a:visited
+{
+}
+
+#master_content a:hover
+{
+	background-color: #BFBFBF;
+	color:#FFF;
+}
+*/
+
+#master_content ul
+{
+	margin: 0 25px 0 30px;
+}
+
+#master_contentheader
+{
+	height: 20px;
+	/*background: url(images/rightcoltop.gif) no-repeat right top;*/
+	background: url(images/page_bg.gif) no-repeat right top;
+}
+
+#master_contentplaceholder
+{
+	padding: 5px 5px 5px 5px;
+	border-left: 1px solid #0F2543;
+	border-right: 1px solid #0F2543;
+	border-bottom: 1px solid #0F2543;
+	/*background-color:#FFFACD;*/
+	background-color:#FFFFFF;
+	line-height: 1.5em;
+	/*width:auto/*650px;*/
+}
+
+#master_contentfooter
+{
+	clear: both;
+	padding: 10px 0 5px 10px;
+	color: #333;
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+}
+
+.ListSearchExtenderPrompt
+{
+	font-style:italic;
+	color:Gray;
+	background-color:yellow;
+}
+
+
+.MyCalendar .ajax__calendar_container {
+    border:1px solid #646464;
+    background-color: lemonchiffon;
+    color: red;
+       
+    
+}
+
+.watermark 
+{
+
+	background: #FFAAFF;
+}
+
+.yui .ajax__calendar_container 
+{
+    background-color:#f2f2f2;
+    border:solid 1px #808080;
+    font-family:arial,helvetica,clean,sans-serif;
+    cursor:default;
+    width:205px;
+    font-size:12px;
+    text-align:center;
+    padding:0px;
+    z-index:1004;
+}
+
+.yui .ajax__calendar_body 
+{
+    height:139px;
+    width:205px;
+    position:relative;
+    overflow:hidden;
+}
+
+.yui .ajax__calendar_days, .yui .ajax__calendar_months, .yui .ajax__calendar_years 
+{
+    top:0px; 
+    left:0px;
+    height:139px;
+    width:195px;    
+    padding:5px;
+    position:absolute;
+    text-align:center;
+}
+
+.yui .ajax__calendar_days table
+{
+    border-spacing:0;
+    border-collapse:collapse;
+    font:100% sans-serif;
+    text-align:center;    
+}
+
+.yui .ajax__calendar_header 
+{
+    background:url(images/yui/sprite.png) repeat-x 0 0; 
+    height:22px;
+    width:100%;
+    font-size:10pt;
+    font-weight:bold;
+    text-align:center;
+    padding-top:3px;
+}
+
+.yui .ajax__calendar_prev 
+{
+    margin-top:2px;
+    margin-left:4px;
+    height:15px;
+    width:25px;
+    cursor:pointer;
+    float:left;
+    background:url(images/yui/sprite.png) 0px -450px no-repeat;
+}
+
+.yui .ajax__calendar_next 
+{
+    margin-top:2px;
+    margin-right:4px;
+    height:15px;
+    width:25px;    
+    cursor:pointer;
+    float:right;
+    background:url(images/yui/sprite.png) 0px -500px no-repeat;
+}
+
+.yui .ajax__calendar_title 
+{
+    cursor:pointer;
+    font-weight:bold;
+    text-align:center;
+}
+
+.yui .ajax__calendar_footer, .yui .ajax__calendar_today 
+{
+    display:none;
+}
+
+.yui .ajax__calendar_dayname 
+{
+    padding-left:3px;
+    padding-right:3px;
+    margin-bottom:5px;
+    margin-left:2px;
+    margin-right:2px;
+    text-align:center;
+    font-weight:700;
+    font-size:10pt;
+    color:#000;
+    border-bottom:solid 1px #a6a6a6;
+}
+
+.yui .ajax__calendar_day, .yui .ajax__calendar_month, .yui .ajax__calendar_year
+{
+    padding:0px;
+    color:#000;
+    text-align:center;  
+    padding:0pt 2px;
+}
+
+.yui .ajax__calendar_hover .ajax__calendar_day, .yui .ajax__calendar_hover .ajax__calendar_month, .yui .ajax__calendar_hover .ajax__calendar_year, .yui .ajax__calendar_hover .ajax__calendar_title
+{
+    color:#0066cc;
+}
+
+.yui .ajax__calendar_other .ajax__calendar_day, .yui .ajax__calendar_other .ajax__calendar_year
+{
+    color:#a6a6a6;   
+}
+
+.yui .ajax__calendar_active .ajax__calendar_day
+{
+    color:#0066cc;   
+}
+
+
+.radcalendar .ajax__calendar_container 
+{
+    background-color:#fff;
+    border:solid 1px #000;
+    font-family:arial,helvetica,clean,sans-serif;
+    cursor:default;
+    width:205px;
+    font-size:12px;
+    text-align:center;
+    padding:0px;
+    z-index:1004;
+}
+
+.radcalendar .ajax__calendar_body 
+{
+    height:136px;
+    width:205px;
+    position:relative;
+    overflow:hidden;
+}
+
+.radcalendar .ajax__calendar_days, .radcalendar .ajax__calendar_months, .radcalendar .ajax__calendar_years 
+{
+    top:0px; 
+    left:0px;
+    height:136px;
+    width:195px;    
+    padding:5px;
+    position:absolute;
+    text-align:center;
+}
+
+.radcalendar .ajax__calendar_days table
+{
+    border-spacing:0;
+    border-collapse:collapse;
+    font:100% sans-serif;
+    text-align:center;    
+}
+
+.radcalendar .ajax__calendar_header 
+{
+    padding-top:4px;
+    background:url(images/radcalendar/header.gif) repeat-x; 
+    height:21px;
+}
+
+.radcalendar .ajax__calendar_prev 
+{
+    margin-left:8px;
+    margin-top:3px;
+    display:block;
+    cursor:pointer;
+    float:left;
+    background:url(images/radcalendar/prev.gif) no-repeat;
+}
+
+.radcalendar .ajax__calendar_next 
+{
+    margin-top:2px;
+    margin-right:0px;
+    display:block;
+    cursor:pointer;
+    float:right;
+    background:url(images/radcalendar/next.gif) no-repeat;
+}
+
+.radcalendar .ajax__calendar_title 
+{
+    cursor:pointer;
+    text-align:center;
+    font-weight:600;
+    font-size:11pt;
+    color:#fff;
+    font-family:Arial;    
+}
+
+.radcalendar .ajax__calendar_footer, .radcalendar .ajax__calendar_today 
+{
+    display:none;
+}
+
+.radcalendar .ajax__calendar_dayname 
+{
+    padding-left:3px;
+    padding-right:3px;
+    margin-bottom:5px;
+    margin-left:2px;
+    margin-right:2px;
+    text-align:center;
+    font-weight:700;
+    font-size:10pt;
+    color:#000;
+    border-bottom:solid 1px #a6a6a6;
+   
+
+
+}
+
+.radcalendar .ajax__calendar_day, .radcalendar .ajax__calendar_month, .radcalendar .ajax__calendar_year
+{
+    padding:0px;
+    color:#000;
+    text-align:center;  
+    padding:0pt 2px;
+}
+
+.radcalendar .ajax__calendar_hover .ajax__calendar_day, .radcalendar .ajax__calendar_hover .ajax__calendar_month, .radcalendar .ajax__calendar_hover .ajax__calendar_year
+{
+    color:#0066cc;
+}
+
+.radcalendar .ajax__calendar_other .ajax__calendar_day, .radcalendar .ajax__calendar_other .ajax__calendar_year
+{
+    color:#a6a6a6;   
+}
+
+.radcalendar .ajax__calendar_active .ajax__calendar_day
+{
+    color:#0066cc;   
+}
+
+/************ MaskedEdit Related Styles ***********************/
+.MaskedEditFocus
+{
+    background-color: #ffffcc;
+    color: #000000;
+}
+.MaskedEditMessage
+{
+	color: #ff0000;
+	font-weight: bold;
+}
+.MaskedEditError
+{
+    background-color: #ffcccc;
+}
+.MaskedEditFocusNegative
+{
+    background-color: #ffffcc;
+    color: #000000;
+}
+.MaskedEditBlurNegative
+{
+    color: #ff0000;
+}
+
+
+
+	a.ContextMenuItem
+{
+	margin: 1px 0 1px 0;
+/*	display: block;*/
+	color: #003399;
+	text-decoration: none;
+	cursor: pointer;	
+	
+	white-space: nowrap;
+}
+
+a.ContextMenuItem-Selected
+{
+	font-weight: bold;
+}
+
+a.ContextMenuItem:hover
+{
+	background-color: #FFE6A0;
+	color: #003399;
+	border: 1px  #D2B47A;
+	
+}
+ 
+
+
+/*Modal Popup*/
+.modalBackground {
+	background-color:Gray;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+}
+
+.modalPopup {
+	background-color:#ffffdd;
+	border-width:3px;
+	border-style:solid;
+	border-color:Gray;
+	padding:3px;
+	width:250px;
+}
+
+.sampleStyleA {
+	background-color:#FFF;
+}
+
+.sampleStyleB {
+	background-color:#FFF;
+	font-family:monospace;
+	font-size:10pt;
+	font-weight:bold;
+}
+
+.sampleStyleC {
+	background-color:#ddffdd;
+	font-family:sans-serif;
+	font-size:10pt;
+	font-style:italic;
+}
+
+.sampleStyleD {
+	background-color:Blue;
+	color:White;
+	font-family:Arial;
+	font-size:10pt;
+}
+
+
+/*Hover Menu*/
+.popupMenu {
+	position:absolute;
+	visibility:hidden;
+	background-color:#F5F7F8;
+	opacity:.9;
+	filter: alpha(opacity=90);
+}
+
+.popupHover {
+	background-image:url(images/header-opened.png);
+	background-repeat:repeat-x;
+	background-position:left top;
+	background-color:#F5F7F8;
+}
